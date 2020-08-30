@@ -44,3 +44,7 @@
 #lbl-mantenimiento-correctivo, #lbl-mantenimiento-preventivo {
   font-size: 22px;
 }
+
+.div-google-chrome, #lbl-soft-equipo{
+  text-align: center;
+}
