@@ -1,0 +1,46 @@
+.cabecera-border {
+  border: 1px solid black;
+}
+
+.cuadros-forms {
+  border: 1px solid black;
+  padding: 1rem !important;
+}
+
+#imgAlcaldia {
+  border-right: 1px solid black;
+}
+#titleFormulario{
+  border-bottom: 1px solid black;
+}
+#versionForm{
+  border-right: 1px solid black;
+  border-left: 1px solid black;
+}
+#titleFormulario #imgAlcaldia {
+  padding: 16px 0;
+}
+
+.txt-small{
+  font-size: 12px !important;
+}
+
+#lbl-tipo-compra {
+  flex: 0 0 16% !important;
+}
+#lbl-numero-proceso {
+  flex: 0 0 19% !important;
+}
+#lbl-valor-proceso, #lbl-garantia, #lbl-fechainicio, #lbl-fechaterminacion {
+  flex: 0 0 15% !important;
+}
+
+#lbl-puerto-vga, #lbl-puerto-hdmi {
+  flex: 0 0 12% !important;
+}
+#lbl-puertos-pci, #div-puerto-vga, #div-puerto-hdmi {
+  flex: 0 0 14% !important;
+}
+#lbl-mantenimiento-correctivo, #lbl-mantenimiento-preventivo {
+  font-size: 22px;
+}
