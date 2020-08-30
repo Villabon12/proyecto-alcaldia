@@ -14,4 +14,8 @@ router.get('/formulariofte', (req, res) => {
   res.render('links/formFTE', {titleForm: 'FICHA TECNICA DEL EQUIPO'});
 });
 
+router.get('/formulariofre', (req, res) => {
+  res.render('links/formFRE', {titleForm: 'FICHA DE REVISION DE EQUIPOS'});
+});
+
 module.exports = router;

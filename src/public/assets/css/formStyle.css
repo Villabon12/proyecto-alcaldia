@@ -10,7 +10,7 @@
 #imgAlcaldia {
   border-right: 1px solid black;
 }
-#titleFormulario{
+#titleFormulario, #div-firma-FRE{
   border-bottom: 1px solid black;
 }
 #versionForm{
@@ -44,7 +44,13 @@
 #lbl-mantenimiento-correctivo, #lbl-mantenimiento-preventivo {
   font-size: 22px;
 }
+#lbl-descripcion-, #lbl-datos-equipo, #lbl-diagnostico-equipo, .firma-div{
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
-.div-google-chrome, #lbl-soft-equipo{
+.div-google-chrome, #lbl-soft-equipo, .items-elementos-FRE{
   text-align: center;
 }
