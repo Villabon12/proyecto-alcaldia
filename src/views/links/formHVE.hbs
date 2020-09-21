@@ -232,102 +232,70 @@
 
             {{!-- CAPACIDAD DEL EQUIPO. START --}}
             <div class="form-group row rounded mx-auto cuadros-forms">
-              <h5 class="col-sm-12 mb-3"><strong>CAPACIDAD DEL EQUIPO.</strong></h5>
-              <label for="" class="col-sm-2 col-form-label txt-small">MARCA DEL DISCO DURO 1:</label>
-              <div class="col-sm-4 mt-2">
-                <input type="text" class="form-control" name="disco1Marca" value="">
+              <div class="col-md-12 form-inline mb-3">
+                <h5><strong>CAPACIDAD DEL EQUIPO.</strong></h5>
+                <a href="" class="btn btn-success">Agregar</a>
               </div>
-              <label for="" class="col-sm-2 col-form-label txt-small">MARCA DEL DISCO DURO 2:</label>
-              <div class="col-sm-4 mt-2">
-                <input type="text" class="form-control" name="disco2Marca" value="">
-              </div>
-
-              <label for="" class="col-sm-2 col-form-label txt-small">DISCO DURO 1 TIPO:</label>
-              <div class="col-sm-4 mt-2">
-                <select name="" class="custom-select mr-sm-2">
-                  <option selected>Choose...</option>
-                  <option value="1">IDE</option>
-                  <option value="2">SATA</option>
-                </select>
-                {{!-- <input type="text" class="form-control" name="disco1Tipo" value="">s --}}
-              </div>
-              <label for="" class="col-sm-2 col-form-label txt-small">DISCO DURO 2 TIPO:</label>
-              <div class="col-sm-4 mt-2">
-                <select name="" class="custom-select mr-sm-2">
-                  <option selected>Choose...</option>
-                  <option value="1">IDE</option>
-                  <option value="2">SATA</option>
-                </select>
-                {{!-- <input type="text" class="form-control" name="disco2Tipo" value=""> --}}
-              </div>
-
-              <label for="" class="col-sm-2 col-form-label txt-small">VOLUMEN DISCO DURO 1:</label>
-              <div class="col-sm-4 mt-2">
-                {{!-- <select name="" class="custom-select mr-sm-2">
-                  <option selected>Choose...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                </select> --}}
-                <input type="text" class="form-control" name="disco1Volumen" value="">
-              </div>
-              <label for="" class="col-sm-2 col-form-label txt-small">VOLUMEN DISCO DURO 2:</label>
-              <div class="col-sm-4 mt-2">
-                {{!-- <select name="" class="custom-select mr-sm-2">
-                  <option selected>Choose...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                </select> --}}
-                <input type="text" class="form-control" name="dicos2Volumen" value="">
+              <div class="col-md-12">
+                <table class="table table-bordered">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Marca del disco duro</th>
+                      <th scope="col">Tipo disco duro</th>
+                      <th scope="col">Volumen disco duro</th>
+                      <th scope="col">Accion</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>
+                        <a href="" class="btn btn-info material-icons">create</a>
+                        <a href="" class="btn btn-danger material-icons">delete</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
             {{!-- CAPACIDAD DEL EQUIPO. END --}}
 
             {{!-- CAPACIDAD DE PROCESAMIENTO DEL EQUIPO. START --}}
             <div class="form-group row rounded mx-auto cuadros-forms">
-              <h5 class="col-sm-12 mb-3"><strong>CAPACIDAD DE PROCESAMIENTO DEL EQUIPO.</strong></h5>
-              <label for="" class="col-sm-2 col-form-label">PROCESADOR:</label>
-              <div class="col-sm-4 mt-2">
-                <input type="text" class="form-control" value="">
+              <div class="col-md-12 form-inline mb-3">
+                <h5><strong>CAPACIDAD DE PROCESAMIENTO DEL EQUIPO.</strong></h5>
+                <a href="" class="btn btn-success float-right">Agregar</a>
               </div>
-              <label for="" class="col-sm-2 col-form-label txt-small">VELOCIDAD DEL PROCESADOR:</label>
-              <div class="col-sm-4 mt-2">
-                <input type="text" class="form-control" value="">
-              </div>
-
-              <label for="" class="col-sm-2 col-form-label txt-small">TIPO DE RAM 1:</label>
-              <div class="col-sm-4 mt-2">
-                <select name="" class="custom-select mr-sm-2">
-                  <option selected>Choose...</option>
-                  <option value="1">DDR3</option>
-                  <option value="2">DDR4</option>
-                </select>
-              </div>
-              <label for="" class="col-sm-2 col-form-label txt-small">VELOCIDAD DE RAM 1:</label>
-              <div class="col-sm-4 mt-2">
-                {{!-- <select name="" class="custom-select mr-sm-2">
-                  <option selected>Choose...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                </select> --}}
-                <input type="text" class="form-control" name="ram1Velocidad" value="">
-              </div>
-
-              <label for="" class="col-sm-2 col-form-label txt-small">TIPO DE RAM 2:</label>
-              <div class="col-sm-4 mt-2">
-                <select name="" class="custom-select mr-sm-2">
-                  <option selected>Choose...</option>
-                  <option value="1">DDR3</option>
-                  <option value="2">DDR4</option>
-                </select>
-              </div>
-              <label for="" class="col-sm-2 col-form-label txt-small">VELOCIDAD DE RAM 2:</label>
-              <div class="col-sm-4 mt-2">
-                {{!-- <select name="" class="custom-select mr-sm-2">
-                  <option selected>Choose...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                </select> --}}
-                <input type="text" class="form-control" name="ram2Velocidad" value="">
+              <div class="col-md-12">
+                <table class="table table-bordered">
+                  <thead class="thead-dark">
+                    <tr>
+                      <th scope="col">#</th>
+                      <th scope="col">Procesador</th>
+                      <th scope="col">Velocidad del procesador</th>
+                      <th scope="col">Tipo de RAM</th>
+                      <th scope="col">Velocidad de RAM</th>
+                      <th scope="col">Accion</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <tr>
+                      <th scope="row">1</th>
+                      <td>Mark</td>
+                      <td>Otto</td>
+                      <td>@mdo</td>
+                      <td>@mda</td>
+                      <td>
+                        <a href="" class="btn btn-info material-icons">create</a>
+                        <a href="" class="btn btn-danger material-icons">delete</a>
+                      </td>
+                    </tr>
+                  </tbody>
+                </table>
               </div>
             </div>
             {{!-- CAPACIDAD DE PROCESAMIENTO DEL EQUIPO. END --}}
@@ -356,58 +324,50 @@
               <label for="" class="col-sm-2 col-form-label txt-small">CONEXION DEL TECLADO:</label>
               <div class="col-sm-2 mt-2">
                 <select name="" class="custom-select mr-sm-2">
-                  <option selected>Choose...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
+                  <option selected>Seleccione...</option>
+                  <option value="1">Sí</option>
+                  <option value="2">No</option>
                 </select>
               </div>
               <label for="" class="col-sm-2 col-form-label txt-small">CONEXION DEL MOUSE:</label>
               <div class="col-sm-2 mt-2">
                 <select name="" class="custom-select mr-sm-2">
-                  <option selected>Choose...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
+                  <option selected>Seleccione...</option>
+                  <option value="1">Sí</option>
+                  <option value="2">No</option>
                 </select>
               </div>
               <label for="" class="col-sm-2 col-form-label txt-small">LECTOR DE TARJETAS:</label>
               <div class="col-sm-2 mt-2">
                 <select name="" class="custom-select mr-sm-2">
-                  <option selected>Choose...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
+                  <option selected>Seleccione...</option>
+                  <option value="1">Sí</option>
+                  <option value="2">No</option>
                 </select>
               </div>
 
               <label for="" class="col-sm-2 col-form-label txt-small">TARJETA DE RED:</label>
               <div class="col-sm-4 mt-2">
                 <select name="" class="custom-select mr-sm-2">
-                  <option selected>Choose...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
+                  <option selected>Seleccione...</option>
+                  <option value="1">RJ45</option>
+                  <option value="2">INALAMBRICA</option>
                 </select>
               </div>
               <label for="" class="col-sm-2 col-form-label txt-small">TARJETA DE VIDEO:</label>
               <div class="col-sm-4 mt-2">
                 <select name="" class="custom-select mr-sm-2">
-                  <option selected>Choose...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                </select>
-              </div>
-              <label for="" class="col-sm-2 col-form-label">WIFI:</label>
-              <div class="col-sm-4 mt-2">
-                <select name="" class="custom-select mr-sm-2">
-                  <option selected>Choose...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
+                  <option selected>Seleccione...</option>
+                  <option value="1">Sí</option>
+                  <option value="2">No</option>
                 </select>
               </div>
               <label for="" class="col-sm-2 col-form-label txt-small">UNIDAD QUEMADORA:</label>
               <div class="col-sm-4 mt-2">
                 <select name="" class="custom-select mr-sm-2">
-                  <option selected>Choose...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
+                  <option selected>Seleccione...</option>
+                  <option value="1">Sí</option>
+                  <option value="2">No</option>
                 </select>
               </div>
 
