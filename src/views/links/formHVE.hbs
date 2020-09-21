@@ -232,10 +232,13 @@
 
             {{!-- CAPACIDAD DEL EQUIPO. START --}}
             <div class="form-group row rounded mx-auto cuadros-forms">
-              <div class="col-md-12 form-inline mb-3">
-                <h5><strong>CAPACIDAD DEL EQUIPO.</strong></h5>
-                <a href="" class="btn btn-success">Agregar</a>
+              <div class="col-md-12 form-inline mb-3 p-0">
+                <h5 class="col-md-6"><strong>CAPACIDAD DEL EQUIPO.</strong></h5>
+                <div class="col-md-6">
+                  <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#addCapacidadEquipo">Agregar</button>
+                </div>
               </div>
+              {{> modalCapacidadEquipo }}
               <div class="col-md-12">
                 <table class="table table-bordered">
                   <thead class="thead-dark">
@@ -266,10 +269,13 @@
 
             {{!-- CAPACIDAD DE PROCESAMIENTO DEL EQUIPO. START --}}
             <div class="form-group row rounded mx-auto cuadros-forms">
-              <div class="col-md-12 form-inline mb-3">
-                <h5><strong>CAPACIDAD DE PROCESAMIENTO DEL EQUIPO.</strong></h5>
-                <a href="" class="btn btn-success float-right">Agregar</a>
+              <div class="col-md-12 form-inline mb-3 p-0">
+                <h5 class="col-md-6"><strong>CAPACIDAD DE PROCESAMIENTO DEL EQUIPO.</strong></h5>
+                <div class="col-md-6">
+                  <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#addCapacidadProcesamiento">Agregar</button>
+                </div>
               </div>
+              {{> modalCapacidadProcesamiento }}
               <div class="col-md-12">
                 <table class="table table-bordered">
                   <thead class="thead-dark">
