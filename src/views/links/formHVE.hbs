@@ -235,7 +235,8 @@
               <div class="col-md-12 form-inline mb-3 p-0">
                 <h5 class="col-md-6"><strong>CAPACIDAD DEL EQUIPO.</strong></h5>
                 <div class="col-md-6">
-                  <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#addCapacidadEquipo">Agregar</button>
+                  {{!-- <button type="button" class="btn btn-success float-right" data-toggle="modal" data-target="#addCapacidadEquipo">Agregar</button> --}}
+                  <button type="button" class="btn btn-success float-right" onclick="agregarFila()">Agregar Campos</button>
                 </div>
               </div>
               {{> modalCapacidadEquipo }}
@@ -250,8 +251,8 @@
                       <th scope="col">Accion</th>
                     </tr>
                   </thead>
-                  <tbody>
-                    <tr>
+                  <tbody id="filaInfo">
+{{!--                     <tr>
                       <th scope="row">1</th>
                       <td>Mark</td>
                       <td>Otto</td>
@@ -260,7 +261,7 @@
                         <a href="" class="btn btn-info material-icons">create</a>
                         <a href="" class="btn btn-danger material-icons">delete</a>
                       </td>
-                    </tr>
+                    </tr> --}}
                   </tbody>
                 </table>
               </div>
