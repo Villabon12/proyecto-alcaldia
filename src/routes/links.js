@@ -5,6 +5,11 @@ const router = express.Router();
 router.get('/formulariohve', (req, res) => {
   res.render('links/formHVE', {titleForm: 'HOJA DE VIDA DEL EQUIPO'});
 });
+router.post('/formulariohve', (req, res) => {
+  const body = req.body;
+  console.log('Cuerpo del formulario: ', body);
+  res.redirect('/home');
+});
 
 router.get('/formulariomde', (req, res) => {
   res.render('links/formMDE', {titleForm: 'MANTENIMIENTO DE EQUIPOS'});

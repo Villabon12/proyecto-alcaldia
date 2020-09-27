@@ -4,9 +4,9 @@ function agregarFilaCapacidadEquipo() {
   nextinputequipo++;
   fila = `<tr>
             <th scope="row">${nextinputequipo}</th>
-            <td><input type="text" class="form-control" aria-describedby="emailHelp"></td>
+            <td><input type="text" class="form-control" name="[marcaHddHVE]" aria-describedby="emailHelp"></td>
             <td>
-              <select class="form-control" id="exampleFormControlSelect1">
+              <select class="form-control" name="[tipoHddHVE]">
                 <option selected>Seleccione...</option>
                 <option value="1">IDE</option>
                 <option value"2">SATA</option>
@@ -14,7 +14,7 @@ function agregarFilaCapacidadEquipo() {
             </td>
             <td>
               <div class="input-group">
-                <input type="number" min="0" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input type="number" min="0" class="form-control" name="[volumenHddHVE]" aria-label="Recipient's username" aria-describedby="basic-addon2">
                 <div class="input-group-append">
                   <span class="input-group-text" id="basic-addon2">GB</span>
                 </div>

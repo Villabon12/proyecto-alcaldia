@@ -12,25 +12,25 @@
               <h5 class="col-sm-12 mb-3"><strong>INFORMACION INICIAL DEL EQUIPO.</strong></h5>
               <label for="" class="col-sm-2 col-form-label">REGISTRO:</label>
               <div class="col-sm-4">
-                <input type="text" class="form-control" value="">
+                <input type="text" class="form-control" value="" name="registroHVE">
               </div>
               <label for="" class="col-sm-3 col-form-label">CODIGO DEL EQUIPO:</label>
               <div class="col-sm-3">
-                <input type="text" class="form-control" value="">
+                <input type="text" class="form-control" value="" name="codigoHVE">
               </div>
 
               <label for="" class="col-sm-2 col-form-label">SECRETARIA:</label>
               <div class="col-sm-4 mt-2">
-                <select name="" class="custom-select mr-sm-4">
-                  <option selected>Choose...</option>
+                <select name="secretariaHVE" class="custom-select mr-sm-4">
+                  <option selected>Seleccione...</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
                 </select>
               </div>
               <label for="" class="col-sm-2 col-form-label">DEPENDENCIA:</label>
               <div class="col-sm-4 mt-2">
-                <select name="" class="custom-select mr-sm-4">
-                  <option selected>Choose...</option>
+                <select name="dependenciaHVE" class="custom-select mr-sm-4">
+                  <option selected>Seleccione...</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
                 </select>
@@ -38,8 +38,8 @@
 
               <label for="" class="col-sm-2 col-form-label">CARGO:</label>
               <div class="col-sm-10 mt-2">
-                <select name="" class="custom-select mr-sm-10">
-                  <option selected>Choose...</option>
+                <select name="cargoHVE" class="custom-select mr-sm-10">
+                  <option selected>Seleccione...</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
                 </select>
@@ -47,20 +47,20 @@
 
               <label for="" class="col-sm-2 col-form-label">UBICACION:</label>
               <div class="col-sm-4 mt-2">
-                <input type="text" class="form-control" value="">
+                <input type="text" class="form-control" name="ubucacionHVE" value="">
               </div>
               <label for="" class="col-sm-2 col-form-label">RESPONSABLE:</label>
               <div class="col-sm-4 mt-2">
-                <input type="text" class="form-control" value="">
+                <input type="text" class="form-control" name="responsableHVE" value="">
               </div>
 
               <label for="" class="col-sm-3 col-form-label">EMPRESA/PROVEEDOR:</label>
               <div class="col-sm-4 mt-2">
-                <input type="text" class="form-control" value="">
+                <input type="text" class="form-control" name="empresa_proveedor_HVE" value="">
               </div>
               <label for="" class="col-sm-2 col-form-label">NIT DEL PROVEEDOR:</label>
               <div class="col-sm-3 mt-2">
-                <input type="text" class="form-control" value="">
+                <input type="text" class="form-control" name="nitProveedorHVE" value="">
               </div>
             </div>
             {{!-- INFORMACION INICIAL DEL EQUIPO. END --}}
@@ -84,47 +84,47 @@
                 </div>
                 <div class="form-check form-check-inline">
                   <label for="" class="col-sm-4 form-check-label">OTRO:</label>
-                  <input type="text" class="form-control" id="inputOtro">
+                  <input type="text" class="form-control" name="otroHVE" id="inputOtro">
                 </div>
               </div>
 
               <label for="" class="col-sm-3 col-form-label txt-small" id="lbl-tipo-compra">TIPO DE COMPRA:</label>
               <div class="col-sm-2 mt-2">
-                <select name="" class="custom-select mr-sm-2">
-                  <option selected>Choose...</option>
+                <select name="tipoCompraHVE" class="custom-select mr-sm-2">
+                  <option selected>Seleccione...</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
                 </select>
               </div>
               <label for="" class="col-sm-3 col-form-label txt-small" id="lbl-numero-proceso">NUMERO DEL PROCESO:</label>
               <div class="col-sm-2 mt-2">
-                <input type="text" class="form-control" value="">
+                <input type="text" class="form-control" name="numeroProcesoHVE" value="">
               </div>
               <label for="" class="col-sm-2 col-form-label txt-small" id="lbl-valor-proceso">VALOR DEL PROCESO:</label>
               <div class="col-sm-2 mt-2">
-                <input type="text" class="form-control" value="">
+                <input type="text" class="form-control" name="valorProcesoHVE" value="">
               </div>
 
-              <label for="" class="col-sm-2 col-form-label txt-small">FECHA DE ADQUISICON:</label>
+              <label for="" class="col-sm-2 col-form-label txt-small">FECHA DE ADQUISICION:</label>
               <div class="col-sm-4 mt-2">
-                <input type="date" class="form-control" value="">
+                <input type="date" class="form-control" name="fechaAdquisicionHVE" value="">
               </div>
               <label for="" class="col-sm-2 col-form-label txt-small">FECHA DE INSTALACION:</label>
               <div class="col-sm-4 mt-2">
-                <input type="date" class="form-control" value="">
+                <input type="date" class="form-control" name="fechaInstalacionHVE" value="">
               </div>
               <div class="col-sm-12 mt-2 mx-auto d-block text-center">
                 <div class="row">
                   <label for="" class="col-sm-4 txt-small">FECHA DE PUESTA EN FUNCIONAMIENTO:</label>
                   <div class="col-sm-7">
-                    <input type="date" class="form-control" value="">
+                    <input type="date" class="form-control" name="fechaFuncionamientoHVE" value="">
                   </div>
                 </div>
               </div>
 
               <label for="" class="col-sm-3 col-form-label">OBJETO DE CONTRATO:</label>
               <div class="col-sm-9 mt-2">
-                <textarea class="form-control" aria-label="With textarea"></textarea>
+                <textarea class="form-control" name="objetoContratoHVE" aria-label="With textarea"></textarea>
               </div>
             </div>
             {{!-- FORMA DE ADQUISICION. END --}}
@@ -134,47 +134,47 @@
               <h5 class="col-sm-12 mb-3"><strong>REFERENCIA DEL EQUIPO.</strong></h5>
               <label for="" class="col-sm-2 col-form-label">TIPO DE EQUIPO:</label>
               <div class="col-sm-4 mt-2">
-                <select name="" class="custom-select mr-sm-4">
-                  <option selected>Choose...</option>
+                <select name="tipoEquipoHVE" class="custom-select mr-sm-4">
+                  <option selected>Seleccione...</option>
                   <option value="1">One</option>
                   <option value="2">Two</option>
                 </select>
               </div>
               <label for="" class="col-sm-3 col-form-label">MARCA DE LA CPU:</label>
               <div class="col-sm-3">
-                <input type="text" class="form-control" value="">
+                <input type="text" class="form-control" name="marcaCpuHVE" value="">
               </div>
 
               <label for="" class="col-sm-3 col-form-label">MODELO DE LA CPU:</label>
               <div class="col-sm-3 mt-2">
-                <input type="text" class="form-control" value="">
+                <input type="text" class="form-control" name="modeloCpuHVE" value="">
               </div>
               <label for="" class="col-sm-3 col-form-label">SERIAL DE LA CPU:</label>
               <div class="col-sm-3 mt-2">
-                <input type="text" class="form-control" value="">
+                <input type="text" class="form-control" name="serialCpuHVE" value="">
               </div>
 
               <label for="" class="col-sm-3 col-form-label">ESTADO ACTUAL:</label>
               <div class="col-sm-4 mt-2">
-                <select name="" class="custom-select mr-sm-4">
-                  <option selected>Seleccionar...</option>
+                <select name="estadoActualHVE" class="custom-select mr-sm-4">
+                  <option selected>Seleccione...</option>
                   <option value="1">Bueno</option>
                   <option value="2">Malo</option>
                 </select>
               </div>
               <label for="" class="col-sm-3 col-form-label">NUM INV EQUIPO:</label>
               <div class="col-sm-2 mt-2">
-                <input type="number" class="form-control" value="">
+                <input type="number" class="form-control" name="numEquipoHVE" value="">
               </div>
 
               <label for="" class="col-sm-2 col-form-label" id="lbl-garantia">GARANTIA:</label>
               <label for="" class="col-sm-3 col-form-label txt-small" id="lbl-fechainicio">FECHA DE INICIO:</label>
               <div class="col-sm-3 mt-2">
-                <input type="date" class="form-control" value="">
+                <input type="date" class="form-control" name="fechaInicioHVE" value="">
               </div>
               <label for="" class="col-sm-2 col-form-label txt-small" id="lbl-fechaterminacion">FECHA DE TERMINACION:</label>
               <div class="col-sm-3 mt-2">
-                <input type="date" class="form-control" value="">
+                <input type="date" class="form-control" name="fechaFinHVE" value="">
               </div>
             </div>
             {{!-- REFERENCIA DEL EQUIPO. END --}}
@@ -184,15 +184,15 @@
               <h5 class="col-sm-12 mb-3"><strong>DESCRIPCION DEL HARDWARE DEL EQUIPO.</strong></h5>
               <label for="" class="col-sm-2 col-form-label txt-small" id="lbl-puertos-pci">No. PUERTOS PCI:</label>
               <div class="col-sm-1 mt-2">
-                <input type="number" class="form-control" value="">
+                <input type="number" class="form-control" name="numPuertosPciHVE" value="">
               </div>
               <label for="" class="col-sm-2 col-form-label txt-small" id="lbl-puertos-usb">No. DE PUESTOS USB:</label>
               <div class="col-sm-1 mt-2">
-                <input type="number" class="form-control" value="">
+                <input type="number" class="form-control" name="numPuertosUsbHVE" value="">
               </div>
               <label for="" class="col-sm-2 col-form-label txt-small" id="lbl-puerto-vga">PUERTO VGA:</label>
               <div class="col-sm-2 mt-2" id="div-puerto-vga">
-                <select name="" class="custom-select mr-sm-2">
+                <select name="puertoVgaHVE" class="custom-select mr-sm-2">
                   <option selected>Seleccione...</option>
                   <option value="1">Sí</option>
                   <option value="2">No</option>
@@ -200,7 +200,7 @@
               </div>
               <label for="" class="col-sm-2 col-form-label txt-small" id="lbl-puerto-hdmi">PUERTO HDMI:</label>
               <div class="col-sm-2 mt-2" id="div-puerto-hdmi">
-                <select name="" class="custom-select mr-sm-2">
+                <select name="puertoHdmiHVE" class="custom-select mr-sm-2">
                   <option selected>Seleccione...</option>
                   <option value="1">Sí</option>
                   <option value="2">No</option>
@@ -209,7 +209,7 @@
 
               <label for="" class="col-sm-2 col-form-label">PUERTO RJ45:</label>
               <div class="col-sm-2 mt-2">
-                <select name="" class="custom-select mr-sm-2">
+                <select name="puertoRj45HVE" class="custom-select mr-sm-2">
                   <option selected>Seleccione...</option>
                   <option value="1">Sí</option>
                   <option value="2">No</option>
@@ -217,7 +217,7 @@
               </div>
               <label for="" class="col-sm-2 col-form-label txt-small">TARJETA INALAMBRICA:</label>
               <div class="col-sm-2 mt-2">
-                <select name="" class="custom-select mr-sm-2">
+                <select name="puertoWifiHVE" class="custom-select mr-sm-2">
                   <option selected>Seleccione...</option>
                   <option value="1">Sí</option>
                   <option value="2">No</option>
@@ -225,7 +225,7 @@
               </div>
               <label for="" class="col-sm-2 col-form-label txt-small">No. DE DISIPADORES:</label>
               <div class="col-sm-2 mt-2">
-                <input type="number" class="form-control" value="">
+                <input type="number" class="form-control" name="numDisipadoresHVE" value="">
               </div>
             </div>
             {{!-- DESCRIPCION DEL HARDWARE DEL EQUIPO. END --}}
@@ -552,6 +552,10 @@
               </div>
             </div>
             {{!-- OBSERVACIONES DEL EQUIPO. END --}}
+
+            <div class="form-group mt-3">
+              <button type="submit" class="btn btn-success float-right">Guardar Hoja de vida Equipo</button>
+            </div>
           </form>
         </div>
       </main>
