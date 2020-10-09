@@ -4,17 +4,17 @@ function agregarFilaCapacidadEquipo() {
   nextinputequipo++;
   fila = `<tr>
             <th scope="row">${nextinputequipo}</th>
-            <td><input type="text" class="form-control" name="[marcaHddHVE]" aria-describedby="emailHelp"></td>
+            <td><input type="text" class="form-control" name="marcaHddHVE" aria-describedby="emailHelp"></td>
             <td>
-              <select class="form-control" name="[tipoHddHVE]">
+              <select class="form-control" name="tipoHddHVE">
                 <option selected>Seleccione...</option>
                 <option value="1">IDE</option>
-                <option value"2">SATA</option>
+                <option value="2">SATA</option>
               </select>
             </td>
             <td>
               <div class="input-group">
-                <input type="number" min="0" class="form-control" name="[volumenHddHVE]" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input type="number" min="0" class="form-control" name="volumenHddHVE" aria-label="Recipient's username" aria-describedby="basic-addon2">
                 <div class="input-group-append">
                   <span class="input-group-text" id="basic-addon2">GB</span>
                 </div>
@@ -30,25 +30,31 @@ function agregarFilaProcesamiento() {
   nextinputprocesamiento++;
   fila = `<tr>
             <th scope="row">${nextinputprocesamiento}</th>
-            <td><input type="text" class="form-control" aria-describedby="emailHelp"></td>
+            <td>
+              <select class="form-control" name="nombreProcesador" id="exampleFormControlSelect1">
+                <option selected>Seleccione...</option>
+                <option value="1">DDR3</option>
+                <option value="2">DDR4</option>
+              </select>
+            </td>
             <td>
               <div class="input-group">
-                <input type="number" min="0" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input type="number" name="velocidadProcesador" min="0" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
                 <div class="input-group-append">
                   <span class="input-group-text" id="basic-addon2">GHz</span>
                 </div>
               </div>
             </td>
             <td>
-              <select class="form-control" id="exampleFormControlSelect1">
+              <select class="form-control" name="tipoRAM" id="exampleFormControlSelect1">
                 <option selected>Seleccione...</option>
                 <option value="1">DDR3</option>
-                <option value"2">DDR4</option>
+                <option value="2">DDR4</option>
               </select>
             </td>
             <td>
               <div class="input-group">
-                <input type="number" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input type="number" name="velocidadRAM" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
                 <div class="input-group-append">
                   <span class="input-group-text" id="basic-addon2">MHz</span>
                 </div>
@@ -59,7 +65,6 @@ function agregarFilaProcesamiento() {
 }
 
 $( document ).ready(function() {
-  console.log("ready!");
   filaequipo = `<tr id="rowSinRegistro1">
                   <th scope="row" colspan="4" class="text-center">No hay registros</th>
                 </tr>`;

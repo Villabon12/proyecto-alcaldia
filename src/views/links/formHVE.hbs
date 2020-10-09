@@ -8,14 +8,14 @@
           {{> headerForms }}
           <form action="" method="POST" class="mt-4">
             {{!-- INFORMACION INICIAL DEL EQUIPO. START --}}
-            <div class="form-group row rounded mx-auto cuadros-forms">
+            <div class="form-group row rounded mx-auto col-xl-12 col-md-6 cuadros-forms">
               <h5 class="col-sm-12 mb-3"><strong>INFORMACION INICIAL DEL EQUIPO.</strong></h5>
               <label for="" class="col-sm-2 col-form-label">REGISTRO:</label>
               <div class="col-sm-4">
                 <input type="text" class="form-control" value="" name="registroHVE">
               </div>
-              <label for="" class="col-sm-3 col-form-label">CODIGO DEL EQUIPO:</label>
-              <div class="col-sm-3">
+              <label for="" class="col-sm-2">CODIGO DEL<br>EQUIPO:</label>
+              <div class="col-sm-4">
                 <input type="text" class="form-control" value="" name="codigoHVE">
               </div>
 
@@ -47,19 +47,27 @@
 
               <label for="" class="col-sm-2 col-form-label">UBICACION:</label>
               <div class="col-sm-4 mt-2">
-                <input type="text" class="form-control" name="ubucacionHVE" value="">
+                <select name="ubicacionHVE" class="custom-select mr-sm-4">
+                  <option selected>Seleccione...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                </select>
               </div>
               <label for="" class="col-sm-2 col-form-label">RESPONSABLE:</label>
               <div class="col-sm-4 mt-2">
                 <input type="text" class="form-control" name="responsableHVE" value="">
               </div>
 
-              <label for="" class="col-sm-3 col-form-label">EMPRESA/PROVEEDOR:</label>
+              <label for="" class="col-sm-2 col-form-label">EMPRESA/<br>PROVEEDOR:</label>
               <div class="col-sm-4 mt-2">
-                <input type="text" class="form-control" name="empresa_proveedor_HVE" value="">
+                <select name="empresaProveedorHVE" class="custom-select mr-sm-4">
+                  <option selected>Seleccione...</option>
+                  <option value="1">One</option>
+                  <option value="2">Two</option>
+                </select>
               </div>
               <label for="" class="col-sm-2 col-form-label">NIT DEL PROVEEDOR:</label>
-              <div class="col-sm-3 mt-2">
+              <div class="col-sm-4 mt-2">
                 <input type="text" class="form-control" name="nitProveedorHVE" value="">
               </div>
             </div>
@@ -69,40 +77,26 @@
             <div class="form-group row rounded mx-auto cuadros-forms">
               <h5 class="col-md-12 mb-3"><strong>FORMA DE ADQUISICION.</strong></h5>
 
-              <div class="col-md-12 form-check-inline mb-2">
+              <div class="col-md-12 form-check-inline justify-content-center mb-2">
                 <div class="form-check">
-                  <input type="radio" class="form-check-input" name="formAdquisicion" id="radioCompra" value="1" checked>
+                  <input type="radio" class="form-check-input" name="formAdquisicionHVE" id="radioCompra" value="1">
                   <label for="" class="col-sm-1 form-check-label">COMPRA</label>
                 </div>
                 <div class="form-check">
-                  <input type="radio" class="form-check-input" name="formAdquisicion" id="radioDonacion" value="2">
+                  <input type="radio" class="form-check-input" name="formAdquisicionHVE" id="radioDonacion" value="2">
                   <label for="" class="col-sm-1 form-check-label">DONACION</label>
                 </div>
                 <div class="form-check">
-                  <input type="radio" class="form-check-input" name="formAdquisicion" id="radioComodato" value="3">
+                  <input type="radio" class="form-check-input" name="formAdquisicionHVE" id="radioComodato" value="3">
                   <label for="" class="col-sm-1 form-check-label">COMODATO</label>
                 </div>
                 <div class="form-check form-check-inline">
+                  <input type="radio" class="form-check-input" name="formAdquisicionHVE" id="radioOtro" value="4">
                   <label for="" class="col-sm-4 form-check-label">OTRO:</label>
-                  <input type="text" class="form-control" name="otroHVE" id="inputOtro">
                 </div>
               </div>
 
-              <label for="" class="col-sm-3 col-form-label txt-small" id="lbl-tipo-compra">TIPO DE COMPRA:</label>
-              <div class="col-sm-2 mt-2">
-                <select name="tipoCompraHVE" class="custom-select mr-sm-2">
-                  <option selected>Seleccione...</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                </select>
-              </div>
-              <label for="" class="col-sm-3 col-form-label txt-small" id="lbl-numero-proceso">NUMERO DEL PROCESO:</label>
-              <div class="col-sm-2 mt-2">
-                <input type="text" class="form-control" name="numeroProcesoHVE" value="">
-              </div>
-              <label for="" class="col-sm-2 col-form-label txt-small" id="lbl-valor-proceso">VALOR DEL PROCESO:</label>
-              <div class="col-sm-2 mt-2">
-                <input type="text" class="form-control" name="valorProcesoHVE" value="">
+              <div class="col-xl-12 form-row m-0" id="contenidoAdquisicion">
               </div>
 
               <label for="" class="col-sm-2 col-form-label txt-small">FECHA DE ADQUISICION:</label>
@@ -132,8 +126,8 @@
             {{!-- REFERENCIA DEL EQUIPO. START --}}
             <div class="form-group row rounded mx-auto cuadros-forms">
               <h5 class="col-sm-12 mb-3"><strong>REFERENCIA DEL EQUIPO.</strong></h5>
-              <label for="" class="col-sm-2 col-form-label">TIPO DE EQUIPO:</label>
-              <div class="col-sm-4 mt-2">
+              <label for="" class="col-sm-3 col-form-label">TIPO DE EQUIPO:</label>
+              <div class="col-sm-3 mt-2">
                 <select name="tipoEquipoHVE" class="custom-select mr-sm-4">
                   <option selected>Seleccione...</option>
                   <option value="1">One</option>
@@ -142,29 +136,21 @@
               </div>
               <label for="" class="col-sm-3 col-form-label">MARCA DE LA CPU:</label>
               <div class="col-sm-3">
-                <input type="text" class="form-control" name="marcaCpuHVE" value="">
+                <input type="text" class="form-control" name="marcaCpuHVE">
               </div>
 
               <label for="" class="col-sm-3 col-form-label">MODELO DE LA CPU:</label>
               <div class="col-sm-3 mt-2">
-                <input type="text" class="form-control" name="modeloCpuHVE" value="">
+                <input type="text" class="form-control" name="modeloCpuHVE">
               </div>
               <label for="" class="col-sm-3 col-form-label">SERIAL DE LA CPU:</label>
               <div class="col-sm-3 mt-2">
-                <input type="text" class="form-control" name="serialCpuHVE" value="">
+                <input type="text" class="form-control" name="serialCpuHVE">
               </div>
 
-              <label for="" class="col-sm-3 col-form-label">ESTADO ACTUAL:</label>
-              <div class="col-sm-4 mt-2">
-                <select name="estadoActualHVE" class="custom-select mr-sm-4">
-                  <option selected>Seleccione...</option>
-                  <option value="1">Bueno</option>
-                  <option value="2">Malo</option>
-                </select>
-              </div>
               <label for="" class="col-sm-3 col-form-label">NUM INV EQUIPO:</label>
-              <div class="col-sm-2 mt-2">
-                <input type="number" class="form-control" name="numEquipoHVE" value="">
+              <div class="col-sm-9 mt-2">
+                <input type="text" class="form-control" name="numEquipoHVE" value="">
               </div>
 
               <label for="" class="col-sm-2 col-form-label" id="lbl-garantia">GARANTIA:</label>
@@ -327,14 +313,6 @@
                 </select>
               </div>
 
-              <label for="" class="col-sm-2 col-form-label txt-small">TARJETA DE RED:</label>
-              <div class="col-sm-4 mt-2">
-                <select name="" class="custom-select mr-sm-2">
-                  <option selected>Seleccione...</option>
-                  <option value="1">RJ45</option>
-                  <option value="2">INALAMBRICA</option>
-                </select>
-              </div>
               <label for="" class="col-sm-2 col-form-label txt-small">TARJETA DE VIDEO:</label>
               <div class="col-sm-4 mt-2">
                 <select name="" class="custom-select mr-sm-2">
@@ -457,24 +435,24 @@
               <h5 class="col-md-12 mb-3"><strong>ESTADO DEL EQUIPO.</strong></h5>
               <div class="col-md-12">
                 <div class="form-check-inline">
-                  <input type="radio" id="estadoBueno" name="estadoEquipo" class="form-check-input" checked>
+                  <input type="radio" id="estadoBueno" name="estadoEquipo" value="1" class="form-check-input" checked>
                   <label class="form-check-label">BUENO</label>
                 </div>
                 <div class="form-check-inline">
-                  <input type="radio" id="estadoRegular" name="estadoEquipo" class="form-check-input">
+                  <input type="radio" id="estadoRegular" name="estadoEquipo" value="2" class="form-check-input">
                   <label class="form-check-label">REGULAR</label>
                 </div>
                 <div class="form-check-inline">
-                  <input type="radio" id="estadoMalo" name="estadoEquipo" class="form-check-input">
+                  <input type="radio" id="estadoMalo" name="estadoEquipo" value="3" class="form-check-input">
                   <label class="form-check-label">MALO</label>
                 </div>
                 <div class="form-check-inline">
-                  <input type="radio" id="estadoDadoBaja" name="estadoEquipo" class="form-check-input">
+                  <input type="radio" id="estadoDadoBaja" name="estadoEquipo" value="4" class="form-check-input">
                   <label class="form-check-label">DADO DE BAJA</label>
                 </div>
                 <label class="col-sm-2 col-form-label txt-small">FECHA DE LA BAJA:</label>
                 <div class="col-sm-4 form-check-inline">
-                  <input type="date" class="form-control">
+                  <input type="date" class="form-control" name="fechaBaja">
                 </div>
               </div>
               {{!-- <label for="" class="col-sm-2 col-form-label txt-small">FECHA DE LA BAJA:</label>
