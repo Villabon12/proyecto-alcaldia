@@ -1,4 +1,3 @@
-
 $(document).ready(function () {
   contenidoCompra = `<div id="compraChecked" class="row mt-2">
                       <label for="" class="col-sm-3 col-form-label txt-small" id="lbl-tipo-compra">TIPO DE COMPRA:</label>
@@ -24,11 +23,19 @@ $(document).ready(function () {
                           <input type="text" class="form-control" name="numeroProcesoHVE">
                         </div>
                       </div>`;
-  
-  contenidoLectorDVD = `<label for="" class="col-sm-4 col-form-label txt-small">MARCA UNIDAD DE DVD/CD:</label>
-                        <div class="col-sm-8 mt-2">
-                          <input type="text" class="form-control" name="" value="">
-                        </div>`;
+
+  contenidoEstadoEquipo = `<div class="row mt-2" id="fechaBajaHVE">
+                            <label class="col-sm-3 col-form-label">FECHA DE LA BAJA:</label>
+                            <div class="col-sm-9">
+                              <input type="date" class="form-control" name="fechaBaja">
+                            </div>
+                          </div>
+                          <div class="row mt-2" id="descripcionBajaHVE">
+                            <label for="" class="col-sm-3 col-form-label">MOTIVO DE LA BAJA:</label>
+                            <div class="col-sm-9">
+                              <textarea class="form-control" aria-label="With textarea"></textarea>
+                            </div>
+                          </div>`;
 
   $("input[name=formAdquisicionHVE]:radio").change(function () {
     // console.log("Seleccionado ", $(this).val());
@@ -44,15 +51,24 @@ $(document).ready(function () {
     }
   });
 
+  let iteradorChck = 0;
   $("input[name=unidadlectoraHVE]:checkbox").change(function () {
-    if ($(this).val() == "on") {
-      // $("input[name=unidadlectoraHVE]:checkbox").attr("checked", true);
-      // console.log("Check ", $(this).val());
-      if ($("input[name=unidadlectoraHVE]:checkbox").attr("checked", false)) {
-        $("input[name=unidadlectoraHVE]:checkbox").attr("checked", true)
-      } else {
-        $("input[name=unidadlectoraHVE]:checkbox").removeAttr("checked");
-      }
+    iteradorChck++;
+    if (iteradorChck % 2) {
+      $("#dvdInput").removeAttr("disabled");
+      $("#dvdInput").focus();
+    } else {
+      $("#dvdInput").val("");
+      $("#dvdInput").prop("disabled", true);
+    }
+  });
+
+  $("input[name=estadoEquipoHVE]:radio").change(function () {
+    if ($(this).val() == 4) {
+      $("#controlBajaHVE").append(contenidoEstadoEquipo);
+    } else {
+      $("#fechaBajaHVE").remove();
+      $("#descripcionBajaHVE").remove();
     }
   });
 });
