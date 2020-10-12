@@ -1,5 +1,5 @@
 
-$( document ).ready(function() {
+$(document).ready(function () {
   contenidoCompra = `<div id="compraChecked" class="row mt-2">
                       <label for="" class="col-sm-3 col-form-label txt-small" id="lbl-tipo-compra">TIPO DE COMPRA:</label>
                       <div class="col-sm-2" id="selectTipoCompra">
@@ -24,6 +24,11 @@ $( document ).ready(function() {
                           <input type="text" class="form-control" name="numeroProcesoHVE">
                         </div>
                       </div>`;
+  
+  contenidoLectorDVD = `<label for="" class="col-sm-4 col-form-label txt-small">MARCA UNIDAD DE DVD/CD:</label>
+                        <div class="col-sm-8 mt-2">
+                          <input type="text" class="form-control" name="" value="">
+                        </div>`;
 
   $("input[name=formAdquisicionHVE]:radio").change(function () {
     // console.log("Seleccionado ", $(this).val());
@@ -36,6 +41,18 @@ $( document ).ready(function() {
     } else {
       $("#compraChecked").remove();
       $("#comodatoChecked").remove();
+    }
+  });
+
+  $("input[name=unidadlectoraHVE]:checkbox").change(function () {
+    if ($(this).val() == "on") {
+      // $("input[name=unidadlectoraHVE]:checkbox").attr("checked", true);
+      // console.log("Check ", $(this).val());
+      if ($("input[name=unidadlectoraHVE]:checkbox").attr("checked", false)) {
+        $("input[name=unidadlectoraHVE]:checkbox").attr("checked", true)
+      } else {
+        $("input[name=unidadlectoraHVE]:checkbox").removeAttr("checked");
+      }
     }
   });
 });

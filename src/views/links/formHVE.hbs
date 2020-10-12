@@ -270,14 +270,18 @@
             {{!-- PERIFERICOS DE ENTRADA DEL EQUIPO. START --}}
             <div class="form-group row rounded mx-auto cuadros-forms">
               <h5 class="col-sm-12 mb-3"><strong>PERIFERICOS DE ENTRADA DEL EQUIPO.</strong></h5>
-              <label for="" class="col-sm-2 col-form-label txt-small">MARCA UNIDAD DE DVD:</label>
+              <div class="col-sm-12 mt-3 mx-auto">
+                <div class="col-sm-4 form-check form-check-inline">
+                  <input class="form-check-input" type="checkbox" name="unidadlectoraHVE">
+                  <label class="form-check-label txt-small" for="inlineCheckbox1">UNIDAD DE DVD/CD</label>
+                </div>
+                <div class="col-sm-8" id="contenidoLector">
+                </div>
+              </div>
+              {{!-- <label for="" class="col-sm-2 col-form-label txt-small">MARCA UNIDAD DE DVD:</label>
               <div class="col-sm-4 mt-2">
                 <input type="text" class="form-control" value="">
-              </div>
-              <label for="" class="col-sm-2 col-form-label txt-small">MARCA UNIDAD DE CD:</label>
-              <div class="col-sm-4 mt-2">
-                <input type="text" class="form-control" value="">
-              </div>
+              </div> --}}
 
               <label for="" class="col-sm-2 col-form-label txt-small">MARCA DEL TECLADO:</label>
               <div class="col-sm-4 mt-2">
