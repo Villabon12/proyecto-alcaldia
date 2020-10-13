@@ -8,13 +8,14 @@ function agregarFilaCapacidadEquipo() {
             <td>
               <select class="form-control" name="tipoHddHVE">
                 <option selected>Seleccione...</option>
-                <option value="1">IDE</option>
-                <option value="2">SATA</option>
+                {{#each tipo_disco}}
+                  <option value="{{id}}">{{nombre}}</option>
+                {{/each}}
               </select>
             </td>
             <td>
               <div class="input-group">
-                <input type="number" min="0" class="form-control" name="volumenHddHVE" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input type="number" min="0" class="form-control" name="volumenHddHVE">
                 <div class="input-group-append">
                   <span class="input-group-text" id="basic-addon2">GB</span>
                 </div>
@@ -33,13 +34,14 @@ function agregarFilaProcesamiento() {
             <td>
               <select class="form-control" name="nombreProcesador" id="exampleFormControlSelect1">
                 <option selected>Seleccione...</option>
-                <option value="1">DDR3</option>
-                <option value="2">DDR4</option>
+                {{#each procesador}}
+                  <option value="{{id}}">{{nombre}}</option>
+                {{/each}}
               </select>
             </td>
             <td>
               <div class="input-group">
-                <input type="number" name="velocidadProcesador" min="0" class="form-control" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                <input type="number" name="velocidadProcesador" min="0" class="form-control">
                 <div class="input-group-append">
                   <span class="input-group-text" id="basic-addon2">GHz</span>
                 </div>
@@ -48,8 +50,9 @@ function agregarFilaProcesamiento() {
             <td>
               <select class="form-control" name="tipoRAM" id="exampleFormControlSelect1">
                 <option selected>Seleccione...</option>
-                <option value="1">DDR3</option>
-                <option value="2">DDR4</option>
+                {{#each tipo_ram}}
+                  <option value="{{id}}">{{nombre}}</option>
+                {{/each}}
               </select>
             </td>
             <td>

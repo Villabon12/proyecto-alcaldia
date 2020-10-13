@@ -26,16 +26,18 @@
                 <div class="col-sm-4 mt-2">
                   <select name="secretariaHVE" class="custom-select mr-sm-4">
                     <option selected>Seleccione...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
+                    {{#each secretaria}}
+                      <option value="{{id}}">{{nombre}}</option>
+                    {{/each}}
                   </select>
                 </div>
                 <label for="" class="col-sm-2 col-form-label">DEPENDENCIA:</label>
                 <div class="col-sm-4 mt-2">
                   <select name="dependenciaHVE" class="custom-select mr-sm-4">
                     <option selected>Seleccione...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
+                    {{#each dependencia}}
+                      <option value="{{id}}">{{nombre}}</option>
+                    {{/each}}
                   </select>
                 </div>
 
@@ -43,8 +45,9 @@
                 <div class="col-sm-10 mt-2">
                   <select name="cargoHVE" class="custom-select mr-sm-10">
                     <option selected>Seleccione...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
+                    {{#each cargo}}
+                      <option value="{{id}}">{{nombre}}</option>
+                    {{/each}}
                   </select>
                 </div>
 
@@ -52,8 +55,9 @@
                 <div class="col-sm-4 mt-2">
                   <select name="ubicacionHVE" class="custom-select mr-sm-4">
                     <option selected>Seleccione...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
+                    {{#each area}}
+                      <option value="{{id}}">{{nombre}}</option>
+                    {{/each}}
                   </select>
                 </div>
                 <label for="" class="col-sm-2 col-form-label">RESPONSABLE:</label>
@@ -65,13 +69,14 @@
                 <div class="col-sm-4 mt-2">
                   <select name="empresaProveedorHVE" class="custom-select mr-sm-4">
                     <option selected>Seleccione...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
+                    {{#each empresa}}
+                      <option value="{{id}}">{{nombre}}</option>
+                    {{/each}}
                   </select>
                 </div>
                 <label for="" class="col-sm-2 col-form-label">NIT DEL PROVEEDOR:</label>
                 <div class="col-sm-4 mt-2">
-                  <input type="text" class="form-control" name="nitProveedorHVE" value="">
+                  <input type="text" class="form-control" name="nitProveedorHVE" value="" readonly>
                 </div>
               </div>
               {{!-- INFORMACION INICIAL DEL EQUIPO. END --}}
@@ -133,8 +138,9 @@
                 <div class="col-sm-3 mt-2">
                   <select name="tipoEquipoHVE" class="custom-select mr-sm-4">
                     <option selected>Seleccione...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
+                    {{#each tipo_ordenador}}
+                      <option value="{{id}}">{{nombre}}</option>
+                    {{/each}}
                   </select>
                 </div>
                 <label for="" class="col-sm-3 col-form-label">MARCA DE LA CPU:</label>
@@ -184,23 +190,24 @@
               <div class="form-group row rounded mx-auto cuadros-forms">
                 <h5 class="col-sm-12 mb-3"><strong>DESCRIPCION DEL HARDWARE DEL EQUIPO.</strong></h5>
                 <label for="" class="col-sm-2 col-form-label txt-small" id="lbl-puertos-pci">No. PUERTOS PCI:</label>
-                <div class="col-sm-1 mt-2">
-                  <input type="number" class="form-control" name="numPuertosPciHVE" value="">
+                <div class="col-sm-4 mt-2">
+                  <input type="number" class="form-control" name="numPuertosPciHVE">
                 </div>
                 <label for="" class="col-sm-2 col-form-label txt-small" id="lbl-puertos-usb">No. DE PUESTOS USB:</label>
-                <div class="col-sm-1 mt-2">
-                  <input type="number" class="form-control" name="numPuertosUsbHVE" value="">
+                <div class="col-sm-4 mt-2">
+                  <input type="number" class="form-control" name="numPuertosUsbHVE">
                 </div>
-                <label for="" class="col-sm-2 col-form-label txt-small" id="lbl-puerto-vga">PUERTO VGA:</label>
-                <div class="col-sm-2 mt-2" id="div-puerto-vga">
+
+                <label for="" class="col-sm-2 col-form-label">PUERTO VGA:</label>
+                <div class="col-sm-4 mt-2" id="div-puerto-vga">
                   <select name="puertoVgaHVE" class="custom-select mr-sm-2">
                     <option selected>Seleccione...</option>
                     <option value="1">Sí</option>
                     <option value="2">No</option>
                   </select>
                 </div>
-                <label for="" class="col-sm-2 col-form-label txt-small" id="lbl-puerto-hdmi">PUERTO HDMI:</label>
-                <div class="col-sm-2 mt-2" id="div-puerto-hdmi">
+                <label for="" class="col-sm-2 col-form-label">PUERTO HDMI:</label>
+                <div class="col-sm-4 mt-2" id="div-puerto-hdmi">
                   <select name="puertoHdmiHVE" class="custom-select mr-sm-2">
                     <option selected>Seleccione...</option>
                     <option value="1">Sí</option>
@@ -226,7 +233,7 @@
                 </div>
                 <label for="" class="col-sm-2 col-form-label txt-small">No. DE DISIPADORES:</label>
                 <div class="col-sm-2 mt-2">
-                  <input type="number" class="form-control" name="numDisipadoresHVE" value="">
+                  <input type="number" class="form-control" name="numDisipadoresHVE">
                 </div>
               </div>
               {{!-- DESCRIPCION DEL HARDWARE DEL EQUIPO. END --}}

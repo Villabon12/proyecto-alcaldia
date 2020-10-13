@@ -4,8 +4,9 @@ $(document).ready(function () {
                       <div class="col-sm-2" id="selectTipoCompra">
                         <select name="tipoCompraHVE" class="custom-select mr-sm-2">
                           <option selected>Seleccione...</option>
-                          <option value="1">One</option>
-                          <option value="2">Two</option>
+                          {{#each tipo_compra}}
+                            <option value="{{id}}">{{nombre}}</option>
+                          {{/each}}
                         </select>
                       </div>
                       <label for="" class="col-sm-3 col-form-label txt-small" id="lbl-numero-proceso">NUMERO DEL PROCESO:</label>
@@ -38,7 +39,6 @@ $(document).ready(function () {
                           </div>`;
 
   $("input[name=formAdquisicionHVE]:radio").change(function () {
-    // console.log("Seleccionado ", $(this).val());
     if ($(this).val() == 1) {
       $("#comodatoChecked").remove();
       $("#contenidoAdquisicion").append(contenidoCompra);
