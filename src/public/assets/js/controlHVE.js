@@ -1,6 +1,7 @@
+
 $(document).ready(function () {
   contenidoCompra = `<div id="compraChecked" class="row mt-2">
-                      <label for="" class="col-sm-3 col-form-label txt-small" id="lbl-tipo-compra">TIPO DE COMPRA:</label>
+                      <label for="" class="col-sm-5 col-lg-2 col-form-label txt-small">TIPO DE COMPRA:</label>
                       <div class="col-sm-2" id="selectTipoCompra">
                         <select name="tipoCompraHVE" class="custom-select mr-sm-2">
                           <option selected>Seleccione...</option>
@@ -9,19 +10,19 @@ $(document).ready(function () {
                           {{/each}}
                         </select>
                       </div>
-                      <label for="" class="col-sm-3 col-form-label txt-small" id="lbl-numero-proceso">NUMERO DEL PROCESO:</label>
+                      <label for="" class="col-sm-5 col-lg-2 col-form-label txt-small">NUMERO DEL PROCESO:</label>
                       <div class="col-sm-2">
                         <input type="text" class="form-control" name="numeroProcesoHVE">
                       </div>
-                      <label for="" class="col-sm-2 col-form-label txt-small" id="lbl-valor-proceso">VALOR DEL PROCESO:</label>
+                      <label for="" class="col-sm-5 col-lg-2 col-form-label txt-small">VALOR DEL PROCESO:</label>
                       <div class="col-sm-2">
                         <input type="text" class="form-control" name="valorProcesoHVE">
                       </div>
                     </div>`;
   contenidoComodato = `<div id="comodatoChecked" class="form-row col-md-12 p-0">
-                        <label for="" class="col-md-2" >NUMERO DEL<br/>PROCESO:</label>
+                        <label for="" class="col-md-5 col-lg-2 col-form-label" >NUMERO DEL PROCESO:</label>
                         <div class="col-md-10">
-                          <input type="text" class="form-control" name="numeroProcesoHVE">
+                          <input type="text" class="form-control mt-2" name="numeroProcesoHVE">
                         </div>
                       </div>`;
 
@@ -71,4 +72,12 @@ $(document).ready(function () {
       $("#descripcionBajaHVE").remove();
     }
   });
+
+  $("select[name=empresaProveedorHVE]").change(function () {
+    console.log("Click", $(this).val());
+  });
+
+  /* var cadena = 'Hola "bienvenido a victorroblesweb" de Víctor Robles';
+  console.log(cadena.replace(/['"]+/g, '')); */
+
 });

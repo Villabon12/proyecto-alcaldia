@@ -1,184 +1,234 @@
 {{> head }}
   {{> navbar }}
+  <div id="layoutSidenav">
     {{> sideNav }}
     <div id="layoutSidenav_content">
       <main>
         <div class="container-fluid">
-          <div class="row">
-            <h1 class="col-xl-12 mt-4 mb-3 justify-content-center">{{titleForm}}</h1>
-          </div>
-          {{> headerForms }}
-          <div class="row">
-            <form action="" method="POST" class="mt-4">
+          {{> headerForms}}
+          <div class="row mt-4">
+            <form action="" method="POST" class="col-lg-12">
               {{!-- INFORMACION INICIAL DEL EQUIPO. START --}}
-              <div class="form-group row rounded mx-auto col-xl-12 col-sm-12 cuadros-forms">
-                <h5 class="col-sm-12 mb-3"><strong>INFORMACION INICIAL DEL EQUIPO.</strong></h5>
-                <label for="" class="col-sm-2 col-form-label">REGISTRO:</label>
-                <div class="col-sm-4">
-                  <input type="text" class="form-control" value="" name="registroHVE">
-                </div>
-                <label for="" class="col-sm-2">CODIGO DEL<br>EQUIPO:</label>
-                <div class="col-sm-4">
-                  <input type="text" class="form-control" value="" name="codigoHVE">
-                </div>
+              <div class="row">
+                <div class="col-lg-12">
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="row">
+                        <h5 class="col-lg-12 mb-3"><strong>INFORMACION INICIAL DEL EQUIPO.</strong></h5>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <label for="" class="col-sm-2 col-form-label">REGISTRO:</label>
+                        <div class="col-sm-4">
+                          <input type="text" class="form-control" name="registroHVE">
+                        </div>
+                        <label for="" class="col-sm-4 mt-sm-3 mt-lg-0 col-lg-2">CODIGO DEL EQUIPO:</label>
+                        <div class="col-sm-4">
+                          <input type="text" class="form-control" name="codigoHVE">
+                        </div>
+                      </div>
 
-                <label for="" class="col-sm-2 col-form-label">SECRETARIA:</label>
-                <div class="col-sm-4 mt-2">
-                  <select name="secretariaHVE" class="custom-select mr-sm-4">
-                    <option selected>Seleccione...</option>
-                    {{#each secretaria}}
-                      <option value="{{id}}">{{nombre}}</option>
-                    {{/each}}
-                  </select>
-                </div>
-                <label for="" class="col-sm-2 col-form-label">DEPENDENCIA:</label>
-                <div class="col-sm-4 mt-2">
-                  <select name="dependenciaHVE" class="custom-select mr-sm-4">
-                    <option selected>Seleccione...</option>
-                    {{#each dependencia}}
-                      <option value="{{id}}">{{nombre}}</option>
-                    {{/each}}
-                  </select>
-                </div>
+                      <div class="row">
+                        <label for="" class="col-sm-2 col-form-label">SECRETARIA:</label>
+                        <div class="col-sm-4 mt-2">
+                          <select name="secretariaHVE" class="custom-select mr-sm-4">
+                            <option selected disabled>Seleccione...</option>
+                            {{#each secretaria}}
+                              <option value="{{id}}">{{nombre}}</option>
+                            {{/each}}
+                          </select>
+                        </div>
+                        <label for="" class="col-sm-2 col-form-label">DEPENDENCIA:</label>
+                        <div class="col-sm-4 mt-2">
+                          <select name="dependenciaHVE" class="custom-select mr-sm-4">
+                            <option selected disabled>Seleccione...</option>
+                            {{#each dependencia}}
+                              <option value="{{id}}">{{nombre}}</option>
+                            {{/each}}
+                          </select>
+                        </div>
+                      </div>
 
-                <label for="" class="col-sm-2 col-form-label">CARGO:</label>
-                <div class="col-sm-10 mt-2">
-                  <select name="cargoHVE" class="custom-select mr-sm-10">
-                    <option selected>Seleccione...</option>
-                    {{#each cargo}}
-                      <option value="{{id}}">{{nombre}}</option>
-                    {{/each}}
-                  </select>
-                </div>
+                      <div class="row">
+                        <label for="" class="col-sm-2 col-form-label">CARGO:</label>
+                        <div class="col-sm-10 mt-2">
+                          <select name="cargoHVE" class="custom-select mr-sm-10">
+                            <option selected disabled>Seleccione...</option>
+                            {{#each cargo}}
+                              <option value="{{id}}">{{nombre}}</option>
+                            {{/each}}
+                          </select>
+                        </div>
+                      </div>
 
-                <label for="" class="col-sm-2 col-form-label">UBICACION:</label>
-                <div class="col-sm-4 mt-2">
-                  <select name="ubicacionHVE" class="custom-select mr-sm-4">
-                    <option selected>Seleccione...</option>
-                    {{#each area}}
-                      <option value="{{id}}">{{nombre}}</option>
-                    {{/each}}
-                  </select>
-                </div>
-                <label for="" class="col-sm-2 col-form-label">RESPONSABLE:</label>
-                <div class="col-sm-4 mt-2">
-                  <input type="text" class="form-control" name="responsableHVE" value="">
-                </div>
+                      <div class="row">
+                        <label for="" class="col-sm-2 col-form-label">UBICACION:</label>
+                        <div class="col-sm-4 mt-2">
+                          <select name="ubicacionHVE" class="custom-select mr-sm-4">
+                            <option selected disabled>Seleccione...</option>
+                            {{#each area}}
+                              <option value="{{id}}">{{nombre}}</option>
+                            {{/each}}
+                          </select>
+                        </div>
+                        <label for="" class="col-sm-2 col-form-label">RESPONSABLE:</label>
+                        <div class="col-sm-4 mt-2">
+                          <input type="text" class="form-control" name="responsableHVE" value="">
+                        </div>
+                      </div>
 
-                <label for="" class="col-sm-2 col-form-label">EMPRESA/<br>PROVEEDOR:</label>
-                <div class="col-sm-4 mt-2">
-                  <select name="empresaProveedorHVE" class="custom-select mr-sm-4">
-                    <option selected>Seleccione...</option>
-                    {{#each empresa}}
-                      <option value="{{id}}">{{nombre}}</option>
-                    {{/each}}
-                  </select>
-                </div>
-                <label for="" class="col-sm-2 col-form-label">NIT DEL PROVEEDOR:</label>
-                <div class="col-sm-4 mt-2">
-                  <input type="text" class="form-control" name="nitProveedorHVE" value="" readonly>
+                      <div class="row">
+                        <label for="" class="col-sm-4 col-lg-2 col-form-label">EMPRESA / PROVEEDOR:</label>
+                        <div class="col-sm-4 mt-2">
+                          <select name="empresaProveedorHVE" class="custom-select mr-sm-4">
+                            <option selected disabled>Seleccione...</option>
+                            {{#each empresa}}
+                              <option value="{{id}}" id="{{nit}}">{{nombre}}</span></option>
+                            {{/each}}
+                          </select>
+                        </div>
+                        <label for="" class="col-sm-2 col-form-label">NIT DEL PROVEEDOR:</label>
+                        <div class="col-sm-4 mt-2">
+                          <input type="text" class="form-control" name="nitProveedorHVE" id="nitEmpresaProveedor" readonly>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               {{!-- INFORMACION INICIAL DEL EQUIPO. END --}}
 
               {{!-- FORMA DE ADQUISICION. START --}}
-              <div class="form-group row rounded mx-auto cuadros-forms">
-                <h5 class="col-md-12 mb-3"><strong>FORMA DE ADQUISICION.</strong></h5>
+              <div class="row">
+                <div class="col-lg-12 mt-3">
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="row">
+                        <h5 class="col-md-12 mb-3"><strong>FORMA DE ADQUISICION.</strong></h5>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="formAdquisicionHVE" id="radioCompra" value="1">
+                            <label for="" class="form-check-label">COMPRA</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="formAdquisicionHVE" id="radioDonacion" value="2">
+                            <label for="" class="form-check-label">DONACION</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="formAdquisicionHVE" id="radioComodato" value="3">
+                            <label for="" class="form-check-label">COMODATO</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input type="radio" class="form-check-input" name="formAdquisicionHVE" id="radioOtro" value="4">
+                            <label for="" class="form-check-label">OTRO</label>
+                          </div>
+                        </div>
+                      </div>
 
-                <div class="col-md-12 justify-content-center mb-2">
-                  <div class="form-check form-check-inline">
-                    <input type="radio" class="form-check-input" name="formAdquisicionHVE" id="radioCompra" value="1">
-                    <label for="" class="col-sm-1 form-check-label">COMPRA</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input type="radio" class="form-check-input" name="formAdquisicionHVE" id="radioDonacion" value="2">
-                    <label for="" class="col-sm-1 form-check-label">DONACION</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input type="radio" class="form-check-input" name="formAdquisicionHVE" id="radioComodato" value="3">
-                    <label for="" class="col-sm-1 form-check-label">COMODATO</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input type="radio" class="form-check-input" name="formAdquisicionHVE" id="radioOtro" value="4">
-                    <label for="" class="col-sm-4 form-check-label">OTRO</label>
-                  </div>
-                </div>
+                      <div class="row">
+                        <div class="col-xl-12 form-row m-0" id="contenidoAdquisicion">
+                        </div>
+                      </div>
 
-                <div class="col-xl-12 form-row m-0" id="contenidoAdquisicion">
-                </div>
+                      <div class="row">
+                        <label for="" class="col-sm-2 col-form-label">FECHA DE ADQUISICION:</label>
+                        <div class="col-sm-4 mt-2">
+                          <input type="date" class="form-control" name="fechaAdquisicionHVE">
+                        </div>
+                        <label for="" class="col-sm-2 col-form-label">FECHA DE INSTALACION:</label>
+                        <div class="col-sm-4 mt-2">
+                          <input type="date" class="form-control" name="fechaInstalacionHVE">
+                        </div>
+                      </div>
 
-                <label for="" class="col-sm-2 col-form-label txt-small">FECHA DE ADQUISICION:</label>
-                <div class="col-sm-4 mt-2">
-                  <input type="date" class="form-control" name="fechaAdquisicionHVE" value="">
-                </div>
-                <label for="" class="col-sm-2 col-form-label txt-small">FECHA DE INSTALACION:</label>
-                <div class="col-sm-4 mt-2">
-                  <input type="date" class="form-control" name="fechaInstalacionHVE" value="">
-                </div>
-                <div class="col-sm-12 mt-2 mx-auto d-block text-center">
-                  <div class="row">
-                    <label for="" class="col-sm-4 txt-small">FECHA DE PUESTA EN FUNCIONAMIENTO:</label>
-                    <div class="col-sm-7">
-                      <input type="date" class="form-control" name="fechaFuncionamientoHVE" value="">
+                      <div class="row">
+                        <label for="" class="col-sm-12 col-md-6 col-form-label">FECHA DE PUESTA EN FUNCIONAMIENTO:</label>
+                        <div class="col-sm-12 col-md-6">
+                          <input type="date" class="form-control mt-2" name="fechaFuncionamientoHVE">
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <label for="" class="col-sm-3 col-form-label">OBJETO DE CONTRATO:</label>
+                        <div class="col-sm-9 mt-2">
+                          <textarea class="form-control" name="objetoContratoHVE" aria-label="With textarea"></textarea>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-
-                <label for="" class="col-sm-3 col-form-label">OBJETO DE CONTRATO:</label>
-                <div class="col-sm-9 mt-2">
-                  <textarea class="form-control" name="objetoContratoHVE" aria-label="With textarea"></textarea>
                 </div>
               </div>
               {{!-- FORMA DE ADQUISICION. END --}}
 
               {{!-- REFERENCIA DEL EQUIPO. START --}}
-              <div class="form-group row rounded mx-auto cuadros-forms">
-                <h5 class="col-sm-12 mb-3"><strong>REFERENCIA DEL EQUIPO.</strong></h5>
-                <label for="" class="col-sm-3 col-form-label">TIPO DE EQUIPO:</label>
-                <div class="col-sm-3 mt-2">
-                  <select name="tipoEquipoHVE" class="custom-select mr-sm-4">
-                    <option selected>Seleccione...</option>
-                    {{#each tipo_ordenador}}
-                      <option value="{{id}}">{{nombre}}</option>
-                    {{/each}}
-                  </select>
-                </div>
-                <label for="" class="col-sm-3 col-form-label">MARCA DE LA CPU:</label>
-                <div class="col-sm-3">
-                  {{!-- <input type="text" class="form-control" name="marcaCpuHVE"> --}}
-                  <select name="marcaCpuHVE" class="custom-select mr-sm-4">
-                    <option selected>Seleccione...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                  </select>
-                </div>
-
-                <label for="" class="col-sm-3 col-form-label">MODELO DE LA CPU:</label>
-                <div class="col-sm-3 mt-2">
-                  <input type="text" class="form-control" name="modeloCpuHVE">
-                </div>
-                <label for="" class="col-sm-3 col-form-label">SERIAL DE LA CPU:</label>
-                <div class="col-sm-3 mt-2">
-                  <input type="text" class="form-control" name="serialCpuHVE">
-                </div>
-
-                <label for="" class="col-sm-3 col-form-label">NUM INV EQUIPO:</label>
-                <div class="col-sm-9 mt-2">
-                  <input type="text" class="form-control" name="numEquipoHVE">
-                </div>
-
-                <div class="card col-md-12 mt-2">
-                  <div class="card-body pl-0 pr-0">
-                    {{!-- <label for="" class="col-sm-2 col-form-label" id="lbl-garantia">GARANTIA:</label> --}}
-                    <h3 class="col-md-12 col-form-label"><b>GARANTIA:</b></h3>
-                    <div class="col-md-12 m-0 row">
-                      <label for="" class="col-sm-3 col-form-label">FECHA DE INICIO:</label>
-                      <div class="col-sm-3 mt-2">
-                        <input type="date" class="form-control" name="fechaInicioHVE">
+              <div class="row">
+                <div class="col-lg-12 mt-3">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5 class="col-sm-12 mb-3"><strong>REFERENCIA DEL EQUIPO.</strong></h5>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <label for="" class="col-sm-3 col-form-label">TIPO DE EQUIPO:</label>
+                        <div class="col-sm-3 mt-2">
+                          <select name="tipoEquipoHVE" class="custom-select mr-sm-4">
+                            <option selected>Seleccione...</option>
+                            {{#each tipo_ordenador}}
+                              <option value="{{id}}">{{nombre}}</option>
+                            {{/each}}
+                          </select>
+                        </div>
+                        <label for="" class="col-sm-3 col-form-label">MARCA DEL ORDENADOR:</label>
+                        <div class="col-sm-3">
+                          {{!-- <input type="text" class="form-control" name="marcaCpuHVE"> --}}
+                          <select name="marcaCpuHVE" class="custom-select mr-sm-4">
+                            <option selected disabled>Seleccione...</option>
+                            {{#each marcaOrdenador}}
+                              <option value="{{id}}">{{nombre}}</option>
+                            {{/each}}
+                          </select>
+                        </div>
                       </div>
-                      <label for="" class="col-sm-3 col-form-label">FECHA DE TERMINACION:</label>
-                      <div class="col-sm-3 mt-2">
-                        <input type="date" class="form-control" name="fechaFinHVE">
+
+                      <div class="row">
+                        <label for="" class="col-sm-3 col-form-label">MODELO DEL ORDENADOR:</label>
+                        <div class="col-sm-3 mt-2">
+                          <input type="text" class="form-control" name="modeloCpuHVE">
+                        </div>
+                        <label for="" class="col-sm-3 col-form-label">SERIAL DEL ORDENADOR:</label>
+                        <div class="col-sm-3 mt-2">
+                          <input type="text" class="form-control" name="serialCpuHVE">
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <label for="" class="col-sm-3 col-form-label">NUM INV EQUIPO:</label>
+                        <div class="col-sm-9 mt-2">
+                          <input type="text" class="form-control" name="numEquipoHVE">
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <div class="card col-lg-12 mt-2">
+                          <div class="card-body pl-0 pr-0">
+                            <h3 class="col-md-12 col-form-label"><b>GARANTIA:</b></h3>
+                            <div class="col-md-12 m-0 row">
+                              <label for="" class="col-sm-3 col-form-label">FECHA DE INICIO:</label>
+                              <div class="col-sm-3 mt-2">
+                                <input type="date" class="form-control" name="fechaInicioHVE">
+                              </div>
+                              <label for="" class="col-sm-3 col-form-label">FECHA DE TERMINACION:</label>
+                              <div class="col-sm-3 mt-2">
+                                <input type="date" class="form-control" name="fechaFinHVE">
+                              </div>
+                            </div>
+                          </div>
+                        </div>
                       </div>
                     </div>
                   </div>
@@ -187,266 +237,341 @@
               {{!-- REFERENCIA DEL EQUIPO. END --}}
 
               {{!-- DESCRIPCION DEL HARDWARE DEL EQUIPO. START --}}
-              <div class="form-group row rounded mx-auto cuadros-forms">
-                <h5 class="col-sm-12 mb-3"><strong>DESCRIPCION DEL HARDWARE DEL EQUIPO.</strong></h5>
-                <label for="" class="col-sm-2 col-form-label txt-small" id="lbl-puertos-pci">No. PUERTOS PCI:</label>
-                <div class="col-sm-4 mt-2">
-                  <input type="number" class="form-control" name="numPuertosPciHVE">
-                </div>
-                <label for="" class="col-sm-2 col-form-label txt-small" id="lbl-puertos-usb">No. DE PUESTOS USB:</label>
-                <div class="col-sm-4 mt-2">
-                  <input type="number" class="form-control" name="numPuertosUsbHVE">
-                </div>
+              <div class="row">
+                <div class="col-lg-12 mt-3">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5 class="col-sm-12 mb-3"><strong>DESCRIPCION DEL HARDWARE DEL EQUIPO.</strong></h5>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <label for="" class="col-sm-4 col-lg-2 col-form-label">No. PUERTOS PCI:</label>
+                        <div class="col-sm-4 mt-2">
+                          <input type="number" class="form-control" name="numPuertosPciHVE">
+                        </div>
+                        <label for="" class="col-sm-4 col-lg-2 col-form-label">No. DE PUESTOS USB:</label>
+                        <div class="col-sm-4 mt-2">
+                          <input type="number" class="form-control" name="numPuertosUsbHVE">
+                        </div>
+                      </div>
 
-                <label for="" class="col-sm-2 col-form-label">PUERTO VGA:</label>
-                <div class="col-sm-4 mt-2" id="div-puerto-vga">
-                  <select name="puertoVgaHVE" class="custom-select mr-sm-2">
-                    <option selected>Seleccione...</option>
-                    <option value="1">Sí</option>
-                    <option value="2">No</option>
-                  </select>
-                </div>
-                <label for="" class="col-sm-2 col-form-label">PUERTO HDMI:</label>
-                <div class="col-sm-4 mt-2" id="div-puerto-hdmi">
-                  <select name="puertoHdmiHVE" class="custom-select mr-sm-2">
-                    <option selected>Seleccione...</option>
-                    <option value="1">Sí</option>
-                    <option value="2">No</option>
-                  </select>
-                </div>
+                      <div class="row">
+                        <label for="" class="col-sm-4 col-lg-2 col-form-label">PUERTO VGA:</label>
+                        <div class="col-sm-4 mt-2">
+                          <select name="puertoVgaHVE" class="custom-select mr-sm-4">
+                            <option selected disabled>Seleccione...</option>
+                            <option value="1">Sí</option>
+                            <option value="2">No</option>
+                          </select>
+                        </div>
+                        <label for="" class="col-sm-4 col-lg-2 col-form-label">PUERTO HDMI:</label>
+                        <div class="col-sm-4 mt-2">
+                          <select name="puertoHdmiHVE" class="custom-select mr-sm-4">
+                            <option selected disabled>Seleccione...</option>
+                            <option value="1">Sí</option>
+                            <option value="2">No</option>
+                          </select>
+                        </div>
+                      </div>
 
-                <label for="" class="col-sm-2 col-form-label">PUERTO RJ45:</label>
-                <div class="col-sm-2 mt-2">
-                  <select name="puertoRj45HVE" class="custom-select mr-sm-2">
-                    <option selected>Seleccione...</option>
-                    <option value="1">Sí</option>
-                    <option value="2">No</option>
-                  </select>
-                </div>
-                <label for="" class="col-sm-2 col-form-label txt-small">TARJETA INALAMBRICA:</label>
-                <div class="col-sm-2 mt-2">
-                  <select name="puertoWifiHVE" class="custom-select mr-sm-2">
-                    <option selected>Seleccione...</option>
-                    <option value="1">Sí</option>
-                    <option value="2">No</option>
-                  </select>
-                </div>
-                <label for="" class="col-sm-2 col-form-label txt-small">No. DE DISIPADORES:</label>
-                <div class="col-sm-2 mt-2">
-                  <input type="number" class="form-control" name="numDisipadoresHVE">
+                      <div class="row">
+                        <label for="" class="col-sm-2 col-form-label">PUERTO RJ45:</label>
+                        <div class="col-sm-2 mt-2">
+                          <select name="puertoRj45HVE" class="custom-select mr-sm-2">
+                            <option selected>Seleccione...</option>
+                            <option value="1">Sí</option>
+                            <option value="2">No</option>
+                          </select>
+                        </div>
+                        <label for="" class="col-sm-2 col-form-label txt-small">TARJETA INALAMBRICA:</label>
+                        <div class="col-sm-2 mt-2">
+                          <select name="puertoWifiHVE" class="custom-select mr-sm-2">
+                            <option selected>Seleccione...</option>
+                            <option value="1">Sí</option>
+                            <option value="2">No</option>
+                          </select>
+                        </div>
+                        <label for="" class="col-sm-2 col-form-label txt-small">No. DE DISIPADORES:</label>
+                        <div class="col-sm-2 mt-2">
+                          <input type="number" class="form-control" name="numDisipadoresHVE">
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               {{!-- DESCRIPCION DEL HARDWARE DEL EQUIPO. END --}}
 
               {{!-- CAPACIDAD DEL EQUIPO. START --}}
-              <div class="form-group row rounded mx-auto cuadros-forms">
-                <div class="col-md-12 form-inline mb-3 p-0">
-                  <h5 class="col-md-6"><strong>CAPACIDAD DEL EQUIPO.</strong></h5>
-                  <div class="col-md-6">
-                    <button type="button" class="btn btn-success float-right" onclick="agregarFilaCapacidadEquipo()">Agregar</button>
+              <div class="row">
+                <div class="col-lg-12 mt-3">
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="row">
+                        <h5 class="col-lg-6"><strong>CAPACIDAD DEL EQUIPO.</strong></h5>
+                        <div class="col-lg-6">
+                          <button type="button" class="btn btn-success float-right" onclick="agregarFilaCapacidadEquipo()">Agregar</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <table class="table table-bordered">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Marca del disco duro</th>
+                                <th scope="col">Tipo disco duro</th>
+                                <th scope="col">Volumen disco duro</th>
+                              </tr>
+                            </thead>
+                            <tbody id="filaInfoEquipo">
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-12">
-                  <table class="table table-bordered">
-                    <thead class="thead-dark">
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Marca del disco duro</th>
-                        <th scope="col">Tipo disco duro</th>
-                        <th scope="col">Volumen disco duro</th>
-                      </tr>
-                    </thead>
-                    <tbody id="filaInfoEquipo">
-                    </tbody>
-                  </table>
                 </div>
               </div>
               {{!-- CAPACIDAD DEL EQUIPO. END --}}
 
               {{!-- CAPACIDAD DE PROCESAMIENTO DEL EQUIPO. START --}}
-              <div class="form-group row rounded mx-auto cuadros-forms">
-                <div class="col-md-12 form-inline mb-3 p-0">
-                  <h5 class="col-md-6"><strong>CAPACIDAD DE PROCESAMIENTO DEL EQUIPO.</strong></h5>
-                  <div class="col-md-6">
-                    <button type="button" class="btn btn-success float-right" onclick="agregarFilaProcesamiento()">Agregar</button>
+              <div class="row">
+                <div class="col-lg-12 mt-3">
+                  <div class="card">
+                    <div class="card-header">
+                      <div class="row">
+                        <h5 class="col-lg-7"><strong>CAPACIDAD DE PROCESAMIENTO DEL EQUIPO.</strong></h5>
+                        <div class="col-lg-5">
+                          <button type="button" class="btn btn-success float-right" onclick="agregarFilaProcesamiento()">Agregar</button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-md-12">
+                          <table class="table table-bordered">
+                            <thead class="thead-dark">
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">Procesador</th>
+                                <th scope="col">Frecuencia CPU</th>
+                                <th scope="col">Tipo de RAM</th>
+                                <th scope="col">Frecuencia RAM</th>
+                              </tr>
+                            </thead>
+                            <tbody id="filaInfoProcesamiento">
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
-                <div class="col-md-12">
-                  <table class="table table-bordered">
-                    <thead class="thead-dark">
-                      <tr>
-                        <th scope="col">#</th>
-                        <th scope="col">Procesador</th>
-                        <th scope="col">Velocidad del procesador</th>
-                        <th scope="col">Tipo de RAM</th>
-                        <th scope="col">Velocidad de RAM</th>
-                      </tr>
-                    </thead>
-                    <tbody id="filaInfoProcesamiento">
-                    </tbody>
-                  </table>
                 </div>
               </div>
               {{!-- CAPACIDAD DE PROCESAMIENTO DEL EQUIPO. END --}}
 
               {{!-- PERIFERICOS DE ENTRADA DEL EQUIPO. START --}}
-              <div class="form-group row rounded mx-auto cuadros-forms">
-                <h5 class="col-sm-12 mb-3"><strong>PERIFERICOS DE ENTRADA DEL EQUIPO.</strong></h5>
+              <div class="row">
+                <div class="col-lg-12 mt-3">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5 class="col-sm-12 mb-3"><strong>PERIFERICOS DE ENTRADA DEL EQUIPO.</strong></h5>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="form-group col-lg-3">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" name="unidadlectoraHVE">
+                            <label class="form-check-label" for="inlineCheckbox1">UNIDAD DE DVD / CD</label>
+                          </div>
+                        </div>
+                        <label for="" class="col-sm-3 col-form-label">MARCA UNIDAD DE DVD:</label>
+                        <div class="col-sm-6">
+                          <input type="text" class="form-control" name="lectorDVDCD" id="dvdInput" disabled>
+                        </div>
+                      </div>
 
-                <div class="form-check form-check-inline ml-3 mr-5">
-                  <input class="form-check-input" type="checkbox" name="unidadlectoraHVE">
-                  <label class="form-check-label" for="inlineCheckbox1">UNIDAD DE DVD / CD</label>
-                </div>
-                <label for="" class="col-sm-3 col-form-label" id="lblDVD">MARCA UNIDAD DE DVD:</label>
-                <div class="col-sm-6">
-                  <input type="text" class="form-control" name="lectorDVDCD" id="dvdInput" disabled>
-                </div>
+                      <div class="row">
+                        <label for="" class="col-sm-2 col-form-label txt-small">MARCA DEL TECLADO:</label>
+                        <div class="col-sm-4 mt-2">
+                          <input type="text" class="form-control" value="">
+                        </div>
+                        <label for="" class="col-sm-2 col-form-label txt-small">MARCA DEL MOUSE:</label>
+                        <div class="col-sm-4 mt-2">
+                          <input type="text" class="form-control" value="">
+                        </div>
+                      </div>
 
-                <label for="" class="col-sm-2 col-form-label txt-small">MARCA DEL TECLADO:</label>
-                <div class="col-sm-4 mt-2">
-                  <input type="text" class="form-control" value="">
-                </div>
-                <label for="" class="col-sm-2 col-form-label txt-small">MARCA DEL MOUSE:</label>
-                <div class="col-sm-4 mt-2">
-                  <input type="text" class="form-control" value="">
-                </div>
+                      <div class="row">
+                        <label for="" class="col-sm-2 col-form-label txt-small">CONEXION DEL TECLADO:</label>
+                        <div class="col-sm-2 mt-2">
+                          <select name="" class="custom-select mr-sm-2">
+                            <option selected>Seleccione...</option>
+                            <option value="1">Sí</option>
+                            <option value="2">No</option>
+                          </select>
+                        </div>
+                        <label for="" class="col-sm-2 col-form-label txt-small">CONEXION DEL MOUSE:</label>
+                        <div class="col-sm-2 mt-2">
+                          <select name="" class="custom-select mr-sm-2">
+                            <option selected>Seleccione...</option>
+                            <option value="1">Sí</option>
+                            <option value="2">No</option>
+                          </select>
+                        </div>
+                        <label for="" class="col-sm-2 col-form-label txt-small">LECTOR DE TARJETAS:</label>
+                        <div class="col-sm-2 mt-2">
+                          <select name="" class="custom-select mr-sm-2">
+                            <option selected>Seleccione...</option>
+                            <option value="1">Sí</option>
+                            <option value="2">No</option>
+                          </select>
+                        </div>
+                      </div>
 
-                <label for="" class="col-sm-2 col-form-label txt-small">CONEXION DEL TECLADO:</label>
-                <div class="col-sm-2 mt-2">
-                  <select name="" class="custom-select mr-sm-2">
-                    <option selected>Seleccione...</option>
-                    <option value="1">Sí</option>
-                    <option value="2">No</option>
-                  </select>
-                </div>
-                <label for="" class="col-sm-2 col-form-label txt-small">CONEXION DEL MOUSE:</label>
-                <div class="col-sm-2 mt-2">
-                  <select name="" class="custom-select mr-sm-2">
-                    <option selected>Seleccione...</option>
-                    <option value="1">Sí</option>
-                    <option value="2">No</option>
-                  </select>
-                </div>
-                <label for="" class="col-sm-2 col-form-label txt-small">LECTOR DE TARJETAS:</label>
-                <div class="col-sm-2 mt-2">
-                  <select name="" class="custom-select mr-sm-2">
-                    <option selected>Seleccione...</option>
-                    <option value="1">Sí</option>
-                    <option value="2">No</option>
-                  </select>
-                </div>
+                      <div class="row">
+                        <label for="" class="col-sm-2 col-form-label txt-small">TARJETA DE VIDEO:</label>
+                        <div class="col-sm-4 mt-2">
+                          <select name="" class="custom-select mr-sm-2">
+                            <option selected>Seleccione...</option>
+                            <option value="1">Sí</option>
+                            <option value="2">No</option>
+                          </select>
+                        </div>
+                        <label for="" class="col-sm-2 col-form-label txt-small">UNIDAD QUEMADORA:</label>
+                        <div class="col-sm-4 mt-2">
+                          <select name="" class="custom-select mr-sm-2">
+                            <option selected>Seleccione...</option>
+                            <option value="1">Sí</option>
+                            <option value="2">No</option>
+                          </select>
+                        </div>
+                      </div>
 
-                <label for="" class="col-sm-2 col-form-label txt-small">TARJETA DE VIDEO:</label>
-                <div class="col-sm-4 mt-2">
-                  <select name="" class="custom-select mr-sm-2">
-                    <option selected>Seleccione...</option>
-                    <option value="1">Sí</option>
-                    <option value="2">No</option>
-                  </select>
-                </div>
-                <label for="" class="col-sm-2 col-form-label txt-small">UNIDAD QUEMADORA:</label>
-                <div class="col-sm-4 mt-2">
-                  <select name="" class="custom-select mr-sm-2">
-                    <option selected>Seleccione...</option>
-                    <option value="1">Sí</option>
-                    <option value="2">No</option>
-                  </select>
-                </div>
-
-                <div class="col-sm-12 mt-3 mx-auto text-center">
-                  <div class="col-sm-4 form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">ESTABILIZADOR</label>
-                  </div>
-                  <div class="col-sm-4 form-check form-check-inline">
-                    <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
-                    <label class="form-check-label" for="inlineCheckbox1">UPS REGULADA</label>
+                      <div class="row mt-3">
+                        <div class="col-lg-6">
+                          <div class="form-check form-check-inline float-lg-right">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">ESTABILIZADOR</label>
+                          </div>
+                        </div>
+                        <div class="col-lg-6">
+                          <div class="form-check form-check-inline">
+                            <input class="form-check-input" type="checkbox" id="inlineCheckbox1" value="option1">
+                            <label class="form-check-label" for="inlineCheckbox1">UPS REGULADA</label>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
                 </div>
               </div>
               {{!-- PERIFERICOS DE ENTRADA DEL EQUIPO. END --}}
 
               {{!-- PERIFERICOS DE SALIDA DEL EQUIPO. START --}}
-              <div class="form-group row rounded mx-auto cuadros-forms">
-                <h5 class="col-sm-12 mb-3"><strong>PERIFERICOS DE SALIDA DEL EQUIPO.</strong></h5>
-                <label for="" class="col-sm-2 col-form-label txt-small">MARCA DEL MONITOR:</label>
-                <div class="col-sm-2 mt-2">
-                  <input type="text" class="form-control" value="">
-                </div>
-                <label for="" class="col-sm-2 col-form-label txt-small">TIPO DE MONITOR:</label>
-                <div class="col-sm-2 mt-2">
-                  <select name="" class="custom-select mr-sm-2">
-                    <option selected>Choose...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                  </select>
-                </div>
-                <label for="" class="col-sm-2 col-form-label txt-small">MODELO DEL MONITOR:</label>
-                <div class="col-sm-2 mt-2">
-                  <input type="text" class="form-control" value="">
-                </div>
+              <div class="row">
+                <div class="col-lg-12 mt-3">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5 class="col-sm-12 mb-3"><strong>PERIFERICOS DE SALIDA DEL EQUIPO.</strong></h5>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <label for="" class="col-sm-2 col-form-label txt-small">MARCA DEL MONITOR:</label>
+                        <div class="col-sm-2 mt-2">
+                          <input type="text" class="form-control" value="">
+                        </div>
+                        <label for="" class="col-sm-2 col-form-label txt-small">TIPO DE MONITOR:</label>
+                        <div class="col-sm-2 mt-2">
+                          <select name="" class="custom-select mr-sm-2">
+                            <option selected>Choose...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                          </select>
+                        </div>
+                        <label for="" class="col-sm-2 col-form-label txt-small">MODELO DEL MONITOR:</label>
+                        <div class="col-sm-2 mt-2">
+                          <input type="text" class="form-control" value="">
+                        </div>
+                      </div>
 
-                <label for="" class="col-sm-2 col-form-label txt-small">SERIAL DEL MONITOR:</label>
-                <div class="col-sm-4 mt-2">
-                  <input type="text" class="form-control" value="">
-                </div>
-                <label for="" class="col-sm-2 col-form-label txt-small">NUM INVEN MONIT:</label>
-                <div class="col-sm-4 mt-2">
-                  <input type="number" class="form-control" value="">
-                </div>
+                      <div class="row">
+                        <label for="" class="col-sm-2 col-form-label txt-small">SERIAL DEL MONITOR:</label>
+                        <div class="col-sm-4 mt-2">
+                          <input type="text" class="form-control" value="">
+                        </div>
+                        <label for="" class="col-sm-2 col-form-label txt-small">NUM INVEN MONIT:</label>
+                        <div class="col-sm-4 mt-2">
+                          <input type="number" class="form-control" value="">
+                        </div>
+                      </div>
 
-                <label for="" class="col-sm-2 col-form-label txt-small">MARCA DE IMPRESORA<br>ASIGNADA:</label>
-                <div class="col-sm-4 mt-2">
-                  <input type="text" class="form-control" value="">
-                </div>
-                <label for="" class="col-sm-2 col-form-label txt-small">TIPO DE IMPRESORA:</label>
-                <div class="col-sm-4 mt-2">
-                  <select name="" class="custom-select mr-sm-2">
-                    <option selected>Choose...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                  </select>
-                </div>
+                      <div class="row">
+                        <label for="" class="col-sm-2 col-form-label txt-small">MARCA DE IMPRESORA<br>ASIGNADA:</label>
+                        <div class="col-sm-4 mt-2">
+                          <input type="text" class="form-control" value="">
+                        </div>
+                        <label for="" class="col-sm-2 col-form-label txt-small">TIPO DE IMPRESORA:</label>
+                        <div class="col-sm-4 mt-2">
+                          <select name="" class="custom-select mr-sm-2">
+                            <option selected>Choose...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                          </select>
+                        </div>
+                      </div>
 
-                <label for="" class="col-sm-2 col-form-label txt-small">TIPO DE CONEXION:</label>
-                <div class="col-sm-2 mt-2">
-                  <select name="" class="custom-select mr-sm-2">
-                    <option selected>Choose...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                  </select>
-                </div>
-                <label for="" class="col-sm-2 col-form-label txt-small">SERIAL DE LA IMPRESORA:</label>
-                <div class="col-sm-2 mt-2">
-                  <input type="text" class="form-control" value="">
-                </div>
-                <label for="" class="col-sm-2 col-form-label txt-small">NUM INV IMPRESORA:</label>
-                <div class="col-sm-2 mt-2">
-                  <input type="text" class="form-control" value="">
-                </div>
+                      <div class="row">
+                        <label for="" class="col-sm-2 col-form-label txt-small">TIPO DE CONEXION:</label>
+                        <div class="col-sm-2 mt-2">
+                          <select name="" class="custom-select mr-sm-2">
+                            <option selected>Choose...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                          </select>
+                        </div>
+                        <label for="" class="col-sm-2 col-form-label txt-small">SERIAL DE LA IMPRESORA:</label>
+                        <div class="col-sm-2 mt-2">
+                          <input type="text" class="form-control" value="">
+                        </div>
+                        <label for="" class="col-sm-2 col-form-label txt-small">NUM INV IMPRESORA:</label>
+                        <div class="col-sm-2 mt-2">
+                          <input type="text" class="form-control" value="">
+                        </div>
+                      </div>
 
-                <label for="" class="col-sm-2 col-form-label txt-small">ESCANER ASIGNADO:</label>
-                <div class="col-sm-2 mt-2">
-                  <select name="" class="custom-select mr-sm-2">
-                    <option selected>Choose...</option>
-                    <option value="1">One</option>
-                    <option value="2">Two</option>
-                  </select>
-                </div>
-                <label for="" class="col-sm-2 col-form-label txt-small">MARCA DEL ESCANER:</label>
-                <div class="col-sm-2 mt-2">
-                  <input type="text" class="form-control" value="">
-                </div>
-                <label for="" class="col-sm-2 col-form-label txt-small">SERIAL DEL ESCANER:</label>
-                <div class="col-sm-2 mt-2">
-                  <input type="text" class="form-control" value="">
-                </div>
+                      <div class="row">
+                        <label for="" class="col-sm-2 col-form-label txt-small">ESCANER ASIGNADO:</label>
+                        <div class="col-sm-2 mt-2">
+                          <select name="" class="custom-select mr-sm-2">
+                            <option selected>Choose...</option>
+                            <option value="1">One</option>
+                            <option value="2">Two</option>
+                          </select>
+                        </div>
+                        <label for="" class="col-sm-2 col-form-label txt-small">MARCA DEL ESCANER:</label>
+                        <div class="col-sm-2 mt-2">
+                          <input type="text" class="form-control" value="">
+                        </div>
+                        <label for="" class="col-sm-2 col-form-label txt-small">SERIAL DEL ESCANER:</label>
+                        <div class="col-sm-2 mt-2">
+                          <input type="text" class="form-control" value="">
+                        </div>
+                      </div>
 
-                <div class="col-sm-12 mx-auto text-center">
-                  <div class="row">
-                    <label for="" class="col-sm-4 col-form-label txt-small">NUM INV ESCANER:</label>
-                    <div class="col-sm-6 mt-2">
-                      <input type="text" class="form-control" value="">
+                      <div class="row">
+                        <div class="col-sm-12 mx-auto text-center">
+                          <div class="row">
+                            <label for="" class="col-sm-4 col-form-label txt-small">NUM INV ESCANER:</label>
+                            <div class="col-sm-6 mt-2">
+                              <input type="text" class="form-control" value="">
+                            </div>
+                          </div>
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -454,75 +579,115 @@
               {{!-- PERIFERICOS DE SALIDA DEL EQUIPO. END --}}
 
               {{!-- ESTADO DEL EQUIPO. START --}}
-              <div class="form-group row rounded mx-auto mx-sm-auto cuadros-forms">
-                <h5 class="col-md-12 mb-3"><strong>ESTADO DEL EQUIPO.</strong></h5>
-                <div class="col-md-12">
-                  <div class="form-check form-check-inline">
-                    <input type="radio" id="estadoBueno" name="estadoEquipoHVE" value="1" class="form-check-input">
-                    <label class="form-check-label">BUENO</label>
+              <div class="row">
+                <div class="col-lg-12 mt-3">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5 class="col-md-12 mb-3"><strong>ESTADO DEL EQUIPO.</strong></h5>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <div class="col-lg-12">
+                          <div class="form-check form-check-inline">
+                            <input type="radio" id="estadoBueno" name="estadoEquipoHVE" value="1" class="form-check-input">
+                            <label class="form-check-label">BUENO</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input type="radio" id="estadoRegular" name="estadoEquipoHVE" value="2" class="form-check-input">
+                            <label class="form-check-label">REGULAR</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input type="radio" id="estadoMalo" name="estadoEquipoHVE" value="3" class="form-check-input">
+                            <label class="form-check-label">MALO</label>
+                          </div>
+                          <div class="form-check form-check-inline">
+                            <input type="radio" id="estadoDadoBaja" name="estadoEquipoHVE" value="4" class="form-check-input">
+                            <label class="form-check-label">DADO DE BAJA</label>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-md-12 mt-2" id="controlBajaHVE">
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="form-check form-check-inline">
-                    <input type="radio" id="estadoRegular" name="estadoEquipoHVE" value="2" class="form-check-input">
-                    <label class="form-check-label">REGULAR</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input type="radio" id="estadoMalo" name="estadoEquipoHVE" value="3" class="form-check-input">
-                    <label class="form-check-label">MALO</label>
-                  </div>
-                  <div class="form-check form-check-inline">
-                    <input type="radio" id="estadoDadoBaja" name="estadoEquipoHVE" value="4" class="form-check-input">
-                    <label class="form-check-label">DADO DE BAJA</label>
-                  </div>
-                </div>
-                <div class="col-md-12 mt-2" id="controlBajaHVE">
                 </div>
               </div>
               {{!-- ESTADO DEL EQUIPO. END --}}
 
               {{!-- MODIFICACIONES DE HARDWARE "COMPONENTES". START --}}
-              <div class="form-group row rounded mx-auto cuadros-forms">
-                <h5 class="col-sm-12 mb-3"><strong>MODIFICACIONES DE HARDWARE "COMPONENTES".</strong></h5>
-                <label for="" class="col-sm-2 col-form-label">FECHA M1:</label>
-                <div class="col-sm-3 mt-2">
-                  <input type="date" class="form-control" disabled>
-                </div>
-                <div class="col-sm-7 mt-2">
-                  <textarea class="form-control" aria-label="With textarea" disabled></textarea>
-                </div>
-                <label for="" class="col-sm-2 col-form-label">TRASLADO:</label>
-                <div class="col-sm-3 mt-2">
-                  <input type="date" class="form-control" disabled>
-                </div>
-                <div class="col-sm-7 mt-2">
-                  <textarea class="form-control" aria-label="With textarea" disabled></textarea>
+              <div class="row">
+                <div class="col-lg-12 mt-3">
+                  <div class="card">
+                    <div class="card-header">
+                      <h5 class="col-sm-12 mb-3"><strong>MODIFICACIONES DE HARDWARE "COMPONENTES".</strong></h5>
+                    </div>
+                    <div class="card-body">
+                      <div class="row">
+                        <label for="" class="col-sm-2 col-form-label">FECHA M1:</label>
+                        <div class="col-sm-3 mt-2">
+                          <input type="date" class="form-control" disabled>
+                        </div>
+                        <div class="col-sm-7 mt-2">
+                          <textarea class="form-control" aria-label="With textarea" disabled></textarea>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <label for="" class="col-sm-2 col-form-label">TRASLADO:</label>
+                        <div class="col-sm-3 mt-2">
+                          <input type="date" class="form-control" disabled>
+                        </div>
+                        <div class="col-sm-7 mt-2">
+                          <textarea class="form-control" aria-label="With textarea" disabled></textarea>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               {{!-- MODIFICACIONES DE HARDWARE "COMPONENTES". END --}}
 
               {{!-- OBSERVACIONES DEL EQUIPO. START --}}
-              <div class="form-group row rounded mx-auto cuadros-forms">
-                <label for="" class="col-sm-3 col-form-label">OBSERVACIONE DEL EQUIPO:</label>
-                <div class="col-sm-9 mt-2">
-                  <textarea class="form-control" aria-label="With textarea" disabled></textarea>
-                </div>
-                <label for="" class="col-sm-3 col-form-label txt-small">FECHA DE ACTUALIZACION:</label>
-                <div class="col-sm-3 mt-2">
-                  <input type="date" class="form-control" disabled>
-                </div>
-                <label for="" class="col-sm-3 col-form-label txt-small">NOMBRE DE QUIEN REALIZO LA ACTUALIZACION:</label>
-                <div class="col-sm-3 mt-2">
-                  <input type="text" class="form-control" disabled>
+              <div class="row">
+                <div class="col-lg-12 mt-3">
+                  <div class="card">
+                    <div class="card-body">
+                      <div class="row">
+                        <label for="" class="col-sm-3 col-form-label">OBSERVACIONE DEL EQUIPO:</label>
+                        <div class="col-sm-9 mt-2">
+                          <textarea class="form-control" aria-label="With textarea" disabled></textarea>
+                        </div>
+                      </div>
+
+                      <div class="row">
+                        <label for="" class="col-sm-3 col-form-label txt-small">FECHA DE ACTUALIZACION:</label>
+                        <div class="col-sm-3 mt-2">
+                          <input type="date" class="form-control" disabled>
+                        </div>
+                        <label for="" class="col-sm-3 col-form-label txt-small">NOMBRE DE QUIEN REALIZO LA ACTUALIZACION:</label>
+                        <div class="col-sm-3 mt-2">
+                          <input type="text" class="form-control" disabled>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                 </div>
               </div>
               {{!-- OBSERVACIONES DEL EQUIPO. END --}}
 
-              <div class="form-group mt-3">
-                <button type="submit" class="btn btn-success float-right">Guardar Hoja de vida Equipo</button>
+              <div class="row">
+                <div class="col-lg-12 form-group mt-3 mb-3">
+                  <button type="submit" class="btn btn-success float-right">Guardar Hoja de vida Equipo</button>
+                </div>
               </div>
+
             </form>
           </div>
         </div>
       </main>
       {{> footer-authentication }}
     </div>
+  </div>
 {{> footer }}

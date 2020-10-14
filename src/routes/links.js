@@ -13,11 +13,13 @@ router.get('/formulariohve', async (req, res) => {
   const tipo_disco = await pool.query(`SELECT * FROM tipo_disco`);
   const tipo_ram = await pool.query(`SELECT * FROM tipo_ram`);
   const procesador = await pool.query(`SELECT * FROM marca_procesador`);
+  const marcaOrdenador = await pool.query(`SELECT * FROM marca_pc`);
 
   res.render('links/formHVE', {
     titleForm: 'HOJA DE VIDA DEL EQUIPO',
     secretaria, dependencia, cargo, area, empresa,
-    tipo_ordenador, tipo_compra, tipo_disco, tipo_ram, procesador
+    tipo_ordenador, tipo_compra, tipo_disco, tipo_ram, procesador,
+    marcaOrdenador
   });
 });
 router.post('/formulariohve', (req, res) => {
